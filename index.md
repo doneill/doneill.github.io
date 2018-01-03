@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: Pixyll
 title: Home
 ---
 
