@@ -1,9 +1,3 @@
-# Mac
-.DS_Store
-Icon
-._*
-.Spotlight-V100
-
 # SublimeText
 /*.sublime-project
 *.sublime-workspace
@@ -12,6 +6,9 @@ Icon
 
 # SASS
 .sass-cache
+_site
+.jekyll-metadata
+**.orig
 
 # Node
 node_modules
@@ -22,3 +19,9 @@ coverage
 
 # Grunt
 .grunt/
+
+# Mac
+.DS_Store
+Icon
+._*
+.Spotlight-V100
