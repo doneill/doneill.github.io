@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+  <title>Seattle Neighborhood Map</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/3.19/esri/css/esri.css">
+  <style>
+    html, 
+    body, 
+    #map {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  
+  <!-- ArcGIS API for JavaScript library references -->
+  <script src="https://js.arcgis.com/3.19/"></script>
+  <!-- Terraformer reference -->
+  <script src="./src/terraformer-1.0.8.min.js"></script>
+  <script src="./src/terraformer-arcgis-parser-1.0.5.min.js"></script>
+
+  <script>
+    require(["esri/map",
+      "esri/layers/VectorTileLayer",
+      "./src/geojsonlayer.js",
+      "dojo/domReady!"], 
+      function(Map, VectorTileLayer, GeoJsonLayer) {
+
+      var map = new Map("map", {
+        center: [-122.337427, 47.611059], // longitude, latitude
+        zoom: 12
+      });
+
+      //The URL referenced in the constructor may point to a style url JSON
+      //or directly to a vector tile service
+      var vtlayer = new VectorTileLayer("https://www.arcgis.com/sharing/rest/content/items/5dd75c1a544b46c3af01ba5736bfdfa0/resources/styles/root.json");
+      map.addLayer(vtlayer);
+
+      map.on("load", function () {
+            addGeoJsonLayer("./data/seattle-neighborhoods.json");
+        });
+
+      // Add the layer
+      function addGeoJsonLayer(url) {
+          // Create the layer
+          var geoJsonLayer = new GeoJsonLayer({
+              url: url
+          });
+          // Zoom to layer
+          geoJsonLayer.on("update-end", function (e) {
+              map.setExtent(e.target.extent.expand(1.2));
+          });
+          // Add to map
+          map.addLayer(geoJsonLayer);
+      }
+
+    });
+  </script>
+</head>
+<body>
+  <div id="map"></div>
+</body>
+</html>
