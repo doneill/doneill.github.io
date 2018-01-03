@@ -3,8 +3,10 @@ layout: page
 title : Gallery
 permalink: /gallery/
 
-tagline: "Maps"
+tagline: ""
 ---
+
+## Maps
 
 - [Seattle Neighborhoods](seattle-neighborhoods.html)
 
