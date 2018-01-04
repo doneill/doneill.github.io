@@ -3,7 +3,7 @@ title: jdONeill
 email: dev@jdoneill.com
 description: geospatial wanderings
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://doneill.github.io" # the base hostname & protocol for your site
+url: "http://gh.jdoneill.com" # the base hostname & protocol for your site
 twitter_username: jdoneill
 github_username:  doneill
 paginate: 5
