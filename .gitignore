@@ -1,7 +1,5 @@
-# SublimeText
-/*.sublime-project
-*.sublime-workspace
-*.sublime-project
+# IDE
+*.vscode
 .idea/*
 
 # SASS
