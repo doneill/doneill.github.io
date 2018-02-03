@@ -1,4 +1,4 @@
 jDOneill
 =================
 
-A simple, static portal.
+A simple, static site.
