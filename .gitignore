@@ -18,6 +18,9 @@ coverage
 # Grunt
 .grunt/
 
+# Ruby
+Gemfile.lock
+
 # Mac
 .DS_Store
 Icon
