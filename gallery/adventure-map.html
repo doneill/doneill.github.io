@@ -31,10 +31,10 @@
       "esri/layers/BaseTileLayer",
       "esri/layers/GroupLayer",
       "esri/widgets/LayerList",
-      "esri/widgets/Attribution",
+      "esri/widgets/Locate",
       "dojo/domReady!"
     ], function(
-        esriConfig, esriRequest, Map, MapView, BaseTileLayer, GroupLayer, LayerList, Attribution
+        esriConfig, esriRequest, Map, MapView, BaseTileLayer, GroupLayer, LayerList, Locate
     ) {
 
         var CustomLayer = BaseTileLayer.createSubclass({
@@ -122,6 +122,10 @@
         zoom: 13,
       });
 
+      var locateBtn = new Locate({
+        view: view
+      });
+
       // Creates actions in the LayerList.
       function defineActions(event) {
 
@@ -177,6 +181,11 @@
             // Add widget to the top right corner of the view
             view.ui.add(layerList, "top-right");
         });
+
+      // Add the locate widget to the top left corner of the view
+      view.ui.add(locateBtn, {
+        position: "top-left"
+      });
         
     });
   </script>
