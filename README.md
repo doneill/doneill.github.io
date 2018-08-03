@@ -1,4 +1,4 @@
 jDOneill
 =================
 
-A simple, [static site](http://jdoneill.com).
+Wanderings of a [static site](http://jdoneill.com).
