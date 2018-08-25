@@ -1,14 +1,18 @@
 require([
     "esri/Map",
-    "esri/views/MapView",
+    "esri/views/SceneView",
     "esri/widgets/CoordinateConversion",
     "esri/widgets/Locate",
     "esri/widgets/Track",
     "esri/widgets/Expand",
     "esri/widgets/BasemapGallery",
     "esri/widgets/Search",
+    "esri/widgets/DirectLineMeasurement3D",
+    "esri/widgets/AreaMeasurement3D",
     "dojo/domReady!"
-  ], function(Map, MapView, CoordinateConversion, Locate, Track, Expand, BasemapGallery, Search) {
+  ], function(Map, SceneView, CoordinateConversion, Locate, Track, Expand, BasemapGallery, Search, DirectLineMeasurement3D, AreaMeasurement3D) {
+
+    var activeWidget = null;
 
     // Create a Map
     var map = new Map({
@@ -16,7 +20,7 @@ require([
     });
 
     // Make map view and bind it to the map
-    var view = new MapView({
+    var view = new SceneView({
       container: "viewDiv",
       map: map,
       center: [-122.337427, 47.611059],
