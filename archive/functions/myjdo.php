@@ -1,6 +1,6 @@
 <?php
 
-	include("debug_functions.php");
+	include("lib/debug_functions.php");
 	include("lib/adodb/adodb.inc.php");
 
 	$db = ADONewConnection($dbdriver);
