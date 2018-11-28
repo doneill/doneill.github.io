@@ -21,6 +21,9 @@ coverage
 # Ruby
 Gemfile.lock
 
+# archive libs
+/archive/functions/lib/*
+
 # Mac
 .DS_Store
 Icon
