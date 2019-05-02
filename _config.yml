@@ -2,13 +2,17 @@
 title: jdONeill
 email: dev@jdoneill.com
 description: geospatial wanderings
+paginate: 5
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://gh.jdoneill.com" # the base hostname & protocol for your site
 twitter_username: jdoneill
 github_username:  doneill
-paginate: 5
-theme-dark: false #Set to true to change to dark website theme
+linkedin_username:  jdoneill
 
-gems: [jekyll-paginate, kramdown]
 # Build settings
 markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock

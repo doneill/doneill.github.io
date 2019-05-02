@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {% include head.html %}
 
-  <body class="{% if site.theme-dark %} dark {% else %} light {% endif %} ">
+  <body>
 
     {% include header.html %}
 
-    <div class="page-content">
+    <div class="container6">
+      <nav>
+          <a href="/gallery/">gallery</a> | 
+          <a href="/photos">photos</a>
+      </nav>
+    </div>
+
+    <main class="page-content" aria-label="Content">
       <div class="wrapper">
         {{ content }}
       </div>
-    </div>
+    </main>
 
     {% include footer.html %}
 
