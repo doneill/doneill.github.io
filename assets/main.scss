@@ -5,11 +5,11 @@
 
 // Solarized color reference
 
-$base03:    #002b36; // background color on dark theme
-$base02:    #073642;
+$base03:    #2B3135; // background color on dark theme
+$base02:    #282a36;
 $base01:    #586e75;
 $base00:    #657b83; // text color on light theme
-$base0:     #839496; // text color on dark theme
+$base0:     #807F7F; // text color on dark theme
 $base1:     #93a1a1;
 $base2:     #eee8d5;
 $base3:     #fdf6e3; // background color on light theme
@@ -31,10 +31,10 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       $base0;
+$text-color:       $base1;
 $background-color: $base03;
-$code-background:  $background-color;
-$code-def-color:   $text-color;
+$code-background:  $base02;
+$code-def-color:   $base0;
 $brand-color:      $green;
 $pre-border-color: $base02;
 
