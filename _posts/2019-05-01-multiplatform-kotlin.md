@@ -1,25 +1,28 @@
 ---
 layout: post
 title: "Multiplatform Kotlin"
-last_update: 2019-01-05
+last_update: 2019-06-12
 permalink: /kotlin-multiplatform/
 categories: kotlin
 ---
 
-Multiplatform projects are an experimental feature in Kotlin that allows for sharing Kotlin code between iOS and Android. Android leverages the Kotlin/JVM and iOS uses Kotlin/Native which allows iOS apps to call Kotlin from Swift.  This post will step us through getting an environment setup for Android and iOS development.  A completed template project is available on [GitHub](https://github.com/doneill/kt-mulitplatform).
+# Update
+Kotlin hands on has an excellent [starter exercise](https://play.kotlinlang.org/hands-on/Targeting%20iOS%20and%20Android%20with%20Kotlin%20Multiplatform/01_Introduction) to get started.  I updated my notes here with the most recent updates.
+
+Multiplatform projects is a feature in Kotlin that allows for sharing Kotlin code between iOS and Android. Android leverages the Kotlin/JVM and iOS uses Kotlin/Native which allows iOS apps to call Kotlin from Swift.  This post will step us through getting an environment setup for Android and iOS development.  A completed template project is available on [GitHub](https://github.com/doneill/kt-mulitplatform).
 
 ## Local Environment
 - [Android Studio](https://developer.android.com/studio)
-- Kotlin plugin 1.3.21 or higher should be installed in the IDE. 
+- Kotlin plugin 1.3.50 or higher should be installed in the IDE. 
 - [Xcode](https://developer.apple.com/xcode/) 
 
 ## Create an Android Project
 Create an empty activity project within Android Studio with **File > New > New Project** from the toolbar.  Ensure that **Kotlin** is the selected language or ensure Kotlin support is checked (depending on version of Android Studio).
 
-Kotlin native requires a recent version of Gradle, ensure that the **gradle/wrapper/gradle-wrapper.properties** file is grabbing 4.7 or higher with the following **distributionUrl**: 
+Kotlin native requires a recent version of Gradle, ensure that the **gradle/wrapper/gradle-wrapper.properties** file is grabbing 5.5.1 or higher with the following **distributionUrl**: 
 
 ```
-distributionUrl=https\://services.gradle.org/distributions/gradle-4.7-all.zip
+distributionUrl=https\://services.gradle.org/distributions/gradle-5.5.1-all.zip
 ```
 
 You should be able to compile and run your new Android app.  
@@ -47,67 +50,71 @@ With a corresponding **kotlin** folder underneath, resembling the structure belo
         -- kotlin
 ```
 
-You can also any classes the new module wizard generated for you.  
-
 ### Update shared lib build script
-We will need to update the lib module build script to be a kotlin multiplatform lib.  Open up the **lib/build.gradle** file, remove all the contents, and replace with the following code: 
+We will need to update the lib module build script to be a kotlin multiplatform lib.  Rename the **lib/build.gradle** file to **lib/build.gradle.kts**, then remove all the contents, and replace with the following code: 
 
-```groovy
-apply plugin: 'kotlin-multiplatform'
+```kotlin
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+
+plugins {
+    kotlin("multiplatform")
+}
 
 kotlin {
-    targets {
-        fromPreset(presets.jvm, 'android')
+    //select iOS target platform depending on the Xcode environment variables
+    val iOSTarget: (String, KotlinNativeTarget.() -> Unit) -> KotlinNativeTarget =
+    if (System.getenv("SDK_NAME")?.startsWith("iphoneos") == true)
+    ::iosArm64
+    else
+    ::iosX64
 
-        final def iOSTarget = System.getenv('SDK_NAME')?.startsWith("iphoneos") \
-                            ? presets.iosArm64 : presets.iosX64
-
-        fromPreset(iOSTarget, 'iOS') {
-            compilations.main.outputKinds('FRAMEWORK')
+    iOSTarget("ios") {
+        binaries {
+            framework {
+                baseName = "SharedCode"
+            }
         }
     }
 
-    sourceSets {
-        commonMain {
-            dependencies {
-                implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
-            }
-        }
+    jvm("android")
 
-        androidMain {
-            dependencies {
-                implementation 'org.jetbrains.kotlin:kotlin-stdlib'
-            }
-        }
-        iosMain {
-        }
+    sourceSets["commonMain"].dependencies {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-common")
+    }
+
+    sourceSets["androidMain"].dependencies {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib")
     }
 }
 
+val packForXcode by tasks.creating(Sync::class) {
+    val targetDir = File(buildDir, "xcode-frameworks")
 
-configurations {
-    compileClasspath
-}
+    /// selecting the right configuration for the iOS
+    /// framework depending on the environment
+    /// variables set by Xcode build
+    val mode = System.getenv("CONFIGURATION") ?: "DEBUG"
+    val framework = kotlin.targets
+            .getByName<KotlinNativeTarget>("ios")
+            .binaries.getFramework(mode)
+    inputs.property("mode", mode)
+    dependsOn(framework.linkTask)
 
-task packForXCode(type: Sync) {
-    final File frameworkDir = new File(buildDir, "xcode-frameworks")
-    final String mode = project.findProperty("XCODE_CONFIGURATION")?.toUpperCase() ?: 'DEBUG'
+    from({ framework.outputDirectory })
+    into(targetDir)
 
-    inputs.property "mode", mode
-    dependsOn kotlin.targets.iOS.compilations.main.linkTaskName("FRAMEWORK", mode)
-
-    from { kotlin.targets.iOS.compilations.main.getBinary("FRAMEWORK", mode).parentFile }
-    into frameworkDir
-
+    /// generate a helpful ./gradlew wrapper with embedded Java path
     doLast {
-        new File(frameworkDir, 'gradlew').with {
-            text = "#!/bin/bash\nexport 'JAVA_HOME=${System.getProperty("java.home")}'\ncd '${rootProject.rootDir}'\n./gradlew \$@\n"
-            setExecutable(true)
-        }
+        val gradlew = File(targetDir, "gradlew")
+        gradlew.writeText("#!/bin/bash\n"
+                + "export 'JAVA_HOME=${System.getProperty("java.home")}'\n"
+                + "cd '${rootProject.rootDir}'\n"
+                + "./gradlew \$@\n")
+        gradlew.setExecutable(true)
     }
 }
 
-tasks.build.dependsOn packForXCode
+tasks.getByName("build").dependsOn(packForXcode)
 ```
 
 The update build script uses `kotlin-multiplatform` plugin and defines several targets.  It also defines a `packForXcode` task which configures a framework lib to link in our iOS app we will create in a later step. 
@@ -194,16 +201,16 @@ Fire up Xcode and create a new **Single View App** with **File > New > Project**
 We need to build the framework initially before we can link it to our ios project using the `build` task from our common lib module.  Open a terminal and cd into the **lib** module folder and run the following: 
 
 ```
-$ ./gradlew clean build --info
+$ ./gradlew clean packForXcode --info
 ```
 
-This will run the `packForXCode` task we defined and configure the framework inside of the **lib/build/xcode-frameworks** folder.  Open finder and drag the **main.framework** folder to the root of the **ios-app** project in xcode.  This should open the linked frameworks dialog, ensure that **Copy items if needed** and **Create groups** radio buttons are selected and click **Finish**. 
+This will run the `packForXCode` task we defined and configure the framework inside of the **lib/build/xcode-frameworks** folder. 
 
 ### Add embedded libs
-Select the **ios-app** project inside xcode file view to open the project properties.  Under the **General** tab scroll down to **Embedded Binaries** and click on the `+` button to add the framework.  Select the **main.framework** and click **Add**.   
+Select the **ios-app** project inside xcode file view to open the project properties.  Under the **General** tab scroll down to **Frameworks, Libraries, and Embedded Content** and click on the `+` button to add the framework.  Select the **SharedContent.framework** and click **Add**.   
 
 ### Update build settings
-With the project properties open, select the **Build Settings** tab and search for **Enable Bitcode**, choose **No** from the drop down. Additionally search for **Framework Search Path** and update the path to `$(SRCROOT)/../lib/build/xcode-frameworks $(PROJECT_DIR)`
+With the project properties open, select the **Build Settings** tab and search for **EFramework Search Paths** and update the path to `$(SRCROOT)/../lib/build/xcode-frameworks`
 
 ### Create new run script
 To keep the framework updated with new builds, select the **Build Rules** tab and add a new run script phase.  Add the following to the shell script: 
@@ -226,16 +233,29 @@ import main
 Now append the following to the `viewDidLoad()` method: 
 
 ```swift
-let label = UILabel(frame: CGRect(x: 0, y: 0, width: 230, height: 21))
+let date = DateHelperKt.getDate()
+
+let label = UILabel(frame: CGRect(x: 0, y: 0, width: 230, height: 42))
 label.center = CGPoint(x: 160, y: 285)
 label.textAlignment = .center
 label.font = label.font.withSize(16)
-
+label.textColor = UIColor.black
 label.numberOfLines = 0
 label.lineBreakMode = .byWordWrapping
-label.text = DateHelperKt.getDate()
+label.text = date
 view.addSubview(label)
 ```
 
 Take note of the `DateHelperKt.getDate` method call to Kotlin.  At this point you should be able to run the iOS app and see the current date. 
+
+## References
+This is a basic example of setting up code sharing with Kotlin between iOS and Android, below are some references to documentation and libraries: 
+
+- [Kotlin/Native interoperability with Swift/Objective-C](https://kotlinlang.org/docs/reference/native/objc_interop.html)
+- [Multiplatform Programming](https://kotlinlang.org/docs/reference/multiplatform.html)
+- [kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines/blob/master/README.md)
+- [kotlinx-io](https://github.com/Kotlin/kotlinx-io)
+- [kotlinx.serialization](https://github.com/Kotlin/kotlinx.serialization)
+- [Ktor](https://ktor.io/)
+- [Ktor HTTP client](https://ktor.io/clients/index.html)
 
