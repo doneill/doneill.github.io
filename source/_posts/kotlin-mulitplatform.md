@@ -2,6 +2,8 @@
 title: Kotlin Mulitplatform
 date: 2019-12-06 17:24:25
 tags:
+- kotlin
+- multiplatform
 ---
 
 

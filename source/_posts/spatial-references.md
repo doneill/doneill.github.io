@@ -2,6 +2,8 @@
 title: Spatial References in Mobile APIs
 date: 2019-05-24 20:46:25
 tags:
+- arcgis runtime
+- google maps
 ---
 
 
