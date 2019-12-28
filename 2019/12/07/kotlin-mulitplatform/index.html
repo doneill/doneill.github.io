@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Kotlin Mulitplatform | jdONeill</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Multiplatform projects is a feature in Kotlin that allows for sharing Kotlin code between iOS and Android. Android leverages the Kotlin&#x2F;JVM and iOS uses Kotlin&#x2F;Native which allows iOS apps to call Kot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kotlin Mulitplatform">
+<meta property="og:url" content="http://jdoneill.com/2019/12/07/kotlin-mulitplatform/index.html">
+<meta property="og:site_name" content="jdONeill">
+<meta property="og:description" content="Multiplatform projects is a feature in Kotlin that allows for sharing Kotlin code between iOS and Android. Android leverages the Kotlin&#x2F;JVM and iOS uses Kotlin&#x2F;Native which allows iOS apps to call Kot">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-12-07T01:24:25.000Z">
+<meta property="article:modified_time" content="2019-12-28T01:28:10.792Z">
+<meta property="article:author" content="jdONeill">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="jdONeill" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jdONeill</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://jdoneill.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-kotlin-mulitplatform" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/12/07/kotlin-mulitplatform/" class="article-date">
+  <time class="dt-published" datetime="2019-12-07T01:24:25.000Z" itemprop="datePublished">2019-12-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Kotlin Mulitplatform
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Multiplatform projects is a feature in Kotlin that allows for sharing Kotlin code between iOS and Android. Android leverages the Kotlin/JVM and iOS uses Kotlin/Native which allows iOS apps to call Kotlin from Swift.  This post will step us through getting an environment setup for Android and iOS development.  A completed template project is available on <a href="https://github.com/doneill/kt-mulitplatform" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Local-Environment"><a href="#Local-Environment" class="headerlink" title="Local Environment"></a>Local Environment</h2><ul>
+<li><a href="https://developer.android.com/studio" target="_blank" rel="noopener">Android Studio</a></li>
+<li>Kotlin plugin 1.3.50 or higher should be installed in the IDE. </li>
+<li><a href="https://developer.apple.com/xcode/" target="_blank" rel="noopener">Xcode</a> </li>
+</ul>
+<h2 id="Create-an-Android-Project"><a href="#Create-an-Android-Project" class="headerlink" title="Create an Android Project"></a>Create an Android Project</h2><p>Create an empty activity project within Android Studio with <strong>File &gt; New &gt; New Project</strong> from the toolbar.  Ensure that <strong>Kotlin</strong> is the selected language or ensure Kotlin support is checked (depending on version of Android Studio).</p>
+<p>Kotlin native requires a recent version of Gradle, ensure that the <strong>gradle/wrapper/gradle-wrapper.properties</strong> file is grabbing 5.5.1 or higher with the following <strong>distributionUrl</strong>: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">distributionUrl&#x3D;https\:&#x2F;&#x2F;services.gradle.org&#x2F;distributions&#x2F;gradle-5.5.1-all.zip</span><br></pre></td></tr></table></figure>
+
+<p>You should be able to compile and run your new Android app.  </p>
+<h2 id="Create-an-Shared-Java-Library-module"><a href="#Create-an-Shared-Java-Library-module" class="headerlink" title="Create an Shared Java Library module"></a>Create an Shared Java Library module</h2><p>Create a new module with <strong>File &gt; New &gt; New Module</strong> from the toolbar, then select <strong>Java Library</strong>.  We will assume the library name is <strong>lib</strong>, but you can name it anything you want.  </p>
+<h3 id="Setup-folder-structure-for-shared-Java-lib"><a href="#Setup-folder-structure-for-shared-Java-lib" class="headerlink" title="Setup folder structure for shared Java lib"></a>Setup folder structure for shared Java lib</h3><p>Create the following subdirectories under your new <strong>lib</strong> module: </p>
+<ul>
+<li>androidMain</li>
+<li>commonMain</li>
+<li>iosMain</li>
+</ul>
+<p>With a corresponding <strong>kotlin</strong> folder underneath, resembling the structure below:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- lib</span><br><span class="line">  -- src</span><br><span class="line">    -- androidMain</span><br><span class="line">        -- kotlin</span><br><span class="line">    -- commonMain</span><br><span class="line">        -- kotlin</span><br><span class="line">    -- iosMain</span><br><span class="line">        -- kotlin</span><br></pre></td></tr></table></figure>
+
+<h3 id="Update-shared-lib-build-script"><a href="#Update-shared-lib-build-script" class="headerlink" title="Update shared lib build script"></a>Update shared lib build script</h3><p>We will need to update the lib module build script to be a kotlin multiplatform lib.  Rename the <strong>lib/build.gradle</strong> file to <strong>lib/build.gradle.kts</strong>, then remove all the contents, and replace with the following code: </p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget</span><br><span class="line"></span><br><span class="line">plugins &#123;</span><br><span class="line">    kotlin(<span class="string">"multiplatform"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">kotlin &#123;</span><br><span class="line">    <span class="comment">//select iOS target platform depending on the Xcode environment variables</span></span><br><span class="line">    <span class="keyword">val</span> iOSTarget: (String, KotlinNativeTarget.() -&gt; <span class="built_in">Unit</span>) -&gt; KotlinNativeTarget =</span><br><span class="line">    <span class="keyword">if</span> (System.getenv(<span class="string">"SDK_NAME"</span>)?.startsWith(<span class="string">"iphoneos"</span>) == <span class="literal">true</span>)</span><br><span class="line">    ::iosArm64</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    ::iosX64</span><br><span class="line"></span><br><span class="line">    iOSTarget(<span class="string">"ios"</span>) &#123;</span><br><span class="line">        binaries &#123;</span><br><span class="line">            framework &#123;</span><br><span class="line">                baseName = <span class="string">"SharedCode"</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    jvm(<span class="string">"android"</span>)</span><br><span class="line"></span><br><span class="line">    sourceSets[<span class="string">"commonMain"</span>].dependencies &#123;</span><br><span class="line">        implementation(<span class="string">"org.jetbrains.kotlin:kotlin-stdlib-common"</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    sourceSets[<span class="string">"androidMain"</span>].dependencies &#123;</span><br><span class="line">        implementation(<span class="string">"org.jetbrains.kotlin:kotlin-stdlib"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> packForXcode <span class="keyword">by</span> tasks.creating(Sync::<span class="class"><span class="keyword">class</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">val</span> targetDir = File(buildDir, <span class="string">"xcode-frameworks"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">/// selecting the right configuration for the iOS</span></span><br><span class="line">    <span class="comment">/// framework depending on the environment</span></span><br><span class="line">    <span class="comment">/// variables set by Xcode build</span></span><br><span class="line">    <span class="keyword">val</span> mode = System.getenv(<span class="string">"CONFIGURATION"</span>) ?: <span class="string">"DEBUG"</span></span><br><span class="line">    <span class="keyword">val</span> framework = kotlin.targets</span><br><span class="line">            .getByName&lt;KotlinNativeTarget&gt;(<span class="string">"ios"</span>)</span><br><span class="line">            .binaries.getFramework(mode)</span><br><span class="line">    inputs.property(<span class="string">"mode"</span>, mode)</span><br><span class="line">    dependsOn(framework.linkTask)</span><br><span class="line"></span><br><span class="line">    from(&#123; framework.outputDirectory &#125;)</span><br><span class="line">    into(targetDir)</span><br><span class="line"></span><br><span class="line">    <span class="comment">/// generate a helpful ./gradlew wrapper with embedded Java path</span></span><br><span class="line">    doLast &#123;</span><br><span class="line">        <span class="keyword">val</span> gradlew = File(targetDir, <span class="string">"gradlew"</span>)</span><br><span class="line">        gradlew.writeText(<span class="string">"#!/bin/bash\n"</span></span><br><span class="line">                + <span class="string">"export 'JAVA_HOME=<span class="subst">$&#123;System.getProperty(<span class="string">"java.home"</span>)&#125;</span>'\n"</span></span><br><span class="line">                + <span class="string">"cd '<span class="subst">$&#123;rootProject.rootDir&#125;</span>'\n"</span></span><br><span class="line">                + <span class="string">"./gradlew \$@\n"</span>)</span><br><span class="line">        gradlew.setExecutable(<span class="literal">true</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">tasks.getByName(<span class="string">"build"</span>).dependsOn(packForXcode)</span><br></pre></td></tr></table></figure>
+
+<p>The update build script uses <code>kotlin-multiplatform</code> plugin and defines several targets.  It also defines a <code>packForXcode</code> task which configures a framework lib to link in our iOS app we will create in a later step. </p>
+<h2 id="Implement-shared-lib-module"><a href="#Implement-shared-lib-module" class="headerlink" title="Implement shared lib module"></a>Implement shared lib module</h2><p>Create a new package and kotlin source file under <strong>lib/src/commonMain/DateHelper.kt</strong>.  Add the following code to get the current date as <code>String</code>. </p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yourdomain.platform</span><br><span class="line"></span><br><span class="line"><span class="keyword">expect</span> <span class="function"><span class="keyword">fun</span> <span class="title">getCurrentDate</span><span class="params">()</span></span>: String</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">getDate</span><span class="params">()</span></span>: String &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"Today's Date is <span class="subst">$&#123;getCurrentDate()&#125;</span>"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The method dependent on platform implementation is marked as <code>expect</code>.  The method called by Android and iOS app clients is <code>getDate()</code>. </p>
+<p>The common lib implementation is done in <strong>androidMain</strong> and <strong>iosMain</strong> respectively.  Create the same package as <strong>commonMain</strong> with a new kotlin source file under <strong>lib/src/androidMain/DateHelperAnd.kt</strong> and <strong>lib/src/iosMain/DateHelperIos.kt</strong></p>
+<p>Add the following for <strong>DateHelperAnd.kt</strong></p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yourdomain.platform</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Date</span><br><span class="line"></span><br><span class="line"><span class="keyword">actual</span> <span class="function"><span class="keyword">fun</span> <span class="title">getCurrentDate</span><span class="params">()</span></span>: String = Date().toString()</span><br></pre></td></tr></table></figure>
+
+<p>Add the following for <strong>DateHelperIos.kt</strong></p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yourdomain.platform</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> platform.Foundation.NSDate</span><br><span class="line"></span><br><span class="line"><span class="keyword">actual</span> <span class="function"><span class="keyword">fun</span> <span class="title">getCurrentDate</span><span class="params">()</span></span> = NSDate().toString()</span><br></pre></td></tr></table></figure>
+
+<p>The implementation of the <code>expect</code> methods are marked as <code>actual</code>.  Kotlin/Native compiler comes with a set of pre-imported frameworks, so we can use the <code>NSDate</code>.  Objective C and Swift interop covered in more detail <a href="https://kotlinlang.org/docs/reference/native/objc_interop.html" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="Link-shared-module-in-Android"><a href="#Link-shared-module-in-Android" class="headerlink" title="Link shared module in Android"></a>Link shared module in Android</h2><p>In order for our Android app to depend on the shared lib we must link it as a dependency.  Open the <strong>app/build.gradle</strong> file and add the following under <strong>dependencies</strong> block:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">dependencies &#123;</span><br><span class="line">    implementation project (&#39;:lib&#39;)</span><br><span class="line">    ... </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Update-the-Android-app"><a href="#Update-the-Android-app" class="headerlink" title="Update the Android app"></a>Update the Android app</h2><p>Using the default <code>TextView</code> added when we generated an Android project, let’s assign an <code>id</code> to the <code>TextView</code> in the activity so we can access it from code.  Open <strong>app/src/main/res/layout/activity_main.xml</strong> and add the <code>id</code>: </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TextView</span> <span class="attr">android:id</span>=<span class="string">"@+id/date_view"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">...</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Now we can add the following line of code to the <code>MainActivity</code> class in <strong>/app/src/main/java/[package]/MainActivity.kt</strong> file to the end of the <code>onCreate</code> method: </p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">findViewById&lt;TextView&gt;(R.id.date_view).text = getDate()</span><br></pre></td></tr></table></figure>
+
+<p>At this point you should be able to run the Android app and see the current date.</p>
+<h2 id="Create-iOS-project"><a href="#Create-iOS-project" class="headerlink" title="Create iOS project"></a>Create iOS project</h2><p>Fire up Xcode and create a new <strong>Single View App</strong> with <strong>File &gt; New &gt; Project</strong>.  Create a project name, e.g. <strong>ios-app</strong>, and set the directory inside of the project directory created with Android Studio.  Your resulting project structure should look similar to this: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- Project</span><br><span class="line">  -- app</span><br><span class="line">  -- lib</span><br><span class="line">  -- iosApp</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Generate-shared-framework-and-link-to-project"><a href="#Generate-shared-framework-and-link-to-project" class="headerlink" title="Generate shared framework and link to project"></a>Generate shared framework and link to project</h2><p>We need to build the framework initially before we can link it to our ios project using the <code>build</code> task from our common lib module.  Open a terminal and cd into the <strong>lib</strong> module folder and run the following: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;gradlew clean packForXcode --info</span><br></pre></td></tr></table></figure>
+
+<p>This will run the <code>packForXCode</code> task we defined and configure the framework inside of the <strong>lib/build/xcode-frameworks</strong> folder. </p>
+<h3 id="Add-embedded-libs"><a href="#Add-embedded-libs" class="headerlink" title="Add embedded libs"></a>Add embedded libs</h3><p>Select the <strong>ios-app</strong> project inside xcode file view to open the project properties.  Under the <strong>General</strong> tab scroll down to <strong>Frameworks, Libraries, and Embedded Content</strong> and click on the <code>+</code> button to add the framework.  Select the <strong>SharedContent.framework</strong> and click <strong>Add</strong>.   </p>
+<h3 id="Update-build-settings"><a href="#Update-build-settings" class="headerlink" title="Update build settings"></a>Update build settings</h3><p>With the project properties open, select the <strong>Build Settings</strong> tab and search for <strong>EFramework Search Paths</strong> and update the path to <code>$(SRCROOT)/../lib/build/xcode-frameworks</code></p>
+<h3 id="Create-new-run-script"><a href="#Create-new-run-script" class="headerlink" title="Create new run script"></a>Create new run script</h3><p>To keep the framework updated with new builds, select the <strong>Build Rules</strong> tab and add a new run script phase.  Add the following to the shell script: </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;$SRCROOT&#x2F;..&#x2F;lib&#x2F;build&#x2F;xcode-frameworks&quot;</span><br><span class="line">.&#x2F;gradlew :lib:packForXCode -PXCODE_CONFIGURATION&#x3D;$&#123;CONFIGURATION&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This will keep the framework up to date on successive builds.  </p>
+<h2 id="Update-the-iOS-App"><a href="#Update-the-iOS-App" class="headerlink" title="Update the iOS App"></a>Update the iOS App</h2><p>The iOS app will use the common lib from Kotlin.  Open up the <strong>ViewController.swift</strong> file and add the following import: </p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// import the framework</span></span><br><span class="line"><span class="keyword">import</span> main</span><br></pre></td></tr></table></figure>
+
+<p>Now append the following to the <code>viewDidLoad()</code> method: </p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> date = <span class="type">DateHelperKt</span>.getDate()</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> label = <span class="type">UILabel</span>(frame: <span class="type">CGRect</span>(x: <span class="number">0</span>, y: <span class="number">0</span>, width: <span class="number">230</span>, height: <span class="number">42</span>))</span><br><span class="line">label.center = <span class="type">CGPoint</span>(x: <span class="number">160</span>, y: <span class="number">285</span>)</span><br><span class="line">label.textAlignment = .center</span><br><span class="line">label.font = label.font.withSize(<span class="number">16</span>)</span><br><span class="line">label.textColor = <span class="type">UIColor</span>.black</span><br><span class="line">label.numberOfLines = <span class="number">0</span></span><br><span class="line">label.lineBreakMode = .byWordWrapping</span><br><span class="line">label.text = date</span><br><span class="line">view.addSubview(label)</span><br></pre></td></tr></table></figure>
+
+<p>Take note of the <code>DateHelperKt.getDate</code> method call to Kotlin.  At this point you should be able to run the iOS app and see the current date. </p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>This is a basic example of setting up code sharing with Kotlin between iOS and Android, below are some references to documentation and libraries: </p>
+<ul>
+<li><a href="https://kotlinlang.org/docs/reference/native/objc_interop.html" target="_blank" rel="noopener">Kotlin/Native interoperability with Swift/Objective-C</a></li>
+<li><a href="https://kotlinlang.org/docs/reference/multiplatform.html" target="_blank" rel="noopener">Multiplatform Programming</a></li>
+<li><a href="https://github.com/Kotlin/kotlinx.coroutines/blob/master/README.md" target="_blank" rel="noopener">kotlinx.coroutines</a></li>
+<li><a href="https://github.com/Kotlin/kotlinx-io" target="_blank" rel="noopener">kotlinx-io</a></li>
+<li><a href="https://github.com/Kotlin/kotlinx.serialization" target="_blank" rel="noopener">kotlinx.serialization</a></li>
+<li><a href="https://ktor.io/" target="_blank" rel="noopener">Ktor</a></li>
+<li><a href="https://ktor.io/clients/index.html" target="_blank" rel="noopener">Ktor HTTP client</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://jdoneill.com/2019/12/07/kotlin-mulitplatform/" data-id="ck4owoivj0004vw138e7bbfed" data-title="Kotlin Mulitplatform" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/25/spatial-references/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Spatial References in Mobile APIs</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/07/kotlin-mulitplatform/">Kotlin Mulitplatform</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/25/spatial-references/">Spatial References in Mobile APIs</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 jdONeill<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
