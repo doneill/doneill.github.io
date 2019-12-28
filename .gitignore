@@ -1,31 +1,20 @@
 # IDE
 *.vscode
 .idea/*
+*.log
+*.iml
 
-# SASS
-.sass-cache
-_site
-.jekyll-metadata
-**.orig
-
-# Node
-node_modules
-npm-debug.log
-
-# Coverage
-coverage
-
-# Grunt
-.grunt/
-
-# Ruby
-Gemfile.lock
-
-# archive libs
-/archive/functions/lib/*
+# js
+.tern-port
+yarn.lock
+package-lock.json
+node_modules/
 
 # Mac
 .DS_Store
 Icon
 ._*
 .Spotlight-V100
+
+# archive libs
+/archive/functions/lib/*
