@@ -13,7 +13,7 @@ $.getJSON("./data/seattle-neighborhoods.geojson", function(data) {
     var geojson = L.geoJson(data, {
         style: geojsonStyle,
       onEachFeature: function (feature, layer) {
-        layer.bindPopup('name: '+feature.properties.name+'<br>area: '+feature.properties.area);
+        layer.bindPopup('<b>Name: </b>'+feature.properties.name+'<br><b>Area: </b>'+feature.properties.area);
       }
     });
 
