@@ -142,6 +142,10 @@ baidu_analytics:
   enabled: false
   id: 
 
+# Leaflet maps
+leaflet: 
+  enabled: true
+
 # Fill in you Gravatar user id / email if you want to use your gravatar as the
 # logo and/or favicons of you website.
 gravatar:
