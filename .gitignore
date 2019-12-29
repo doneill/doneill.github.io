@@ -3,6 +3,7 @@
 .idea/*
 *.log
 *.iml
+*.jshintrc
 
 # js
 .tern-port
