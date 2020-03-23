@@ -7,6 +7,7 @@ from htmlmin import minify
 # ///////////////////////////////////////////////////
 # scrape url table and convert to panda datatable
 # ///////////////////////////////////////////////////
+
 url = 'https://www.worldometers.info/coronavirus/country/us/'   
 page = requests.get(url)
 doc = lh.fromstring(page.content)
@@ -43,6 +44,7 @@ df = pd.DataFrame(Dict)
 # ///////////////////////////////////////////////////
 # update states.geojson with covid data from datatable
 # ///////////////////////////////////////////////////
+
 with open('./source/gallery/data/states.geojson') as f:
   geojson = json.load(f)
 
@@ -61,5 +63,7 @@ for i in df.index:
     print(df['USAState'][i], df['TotalCases'][i], df['NewCases'][i], df['TotalDeaths'][i])
 
 with open('./source/gallery/data/states.geojson', 'w') as f:
-    json.dump(geojson, f)
+  f.seek(0)
+  json.dump(geojson, f, indent=2)
+  f.truncate()
 f.close
