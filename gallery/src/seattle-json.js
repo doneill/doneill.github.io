@@ -1,5 +1,7 @@
+mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+
 var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href=”http://osm.org/copyright”>OpenStreetMap</a> contributors',
+    attribution: '&copy; ' + mapLink + ' Contributors',
     maxzoom: 18
 });
 
