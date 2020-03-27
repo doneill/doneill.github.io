@@ -21,25 +21,25 @@ for header in tr_elements[0]:
   name = header.text_content()
   col.append((name, []))
 
-for j in range(1, len(tr_elements)):
-    tr_element = tr_elements[j]
-    
-    i = 0
-    for row in tr_element.iterchildren():
-        data = row.text_content()
-        min_data = minify(data)
-        value = min_data.replace(',', '')
-        if i > 0:
-          try:
-            data = int(value)
-          except:
-            pass
+for j in range(1, 55):
+  tr_element = tr_elements[j]
 
-        col[i][1].append(value)
-        i+=1
+  i = 0
+  for row in tr_element.iterchildren():
+    data = row.text_content()
+    min_data = minify(data)
+    value = min_data.replace(',', '')
+    if i > 0:
+      try:
+        data = int(value)
+      except:
+        pass
 
-Dict = {title:column for (title,column) in col}
-df = pd.DataFrame(Dict)
+    col[i][1].append(value)
+    i+=1
+
+d = {title:column for (title,column) in col}
+df = pd.DataFrame(d)
 
 # ///////////////////////////////////////////////////
 # update states.geojson with covid data from datatable
