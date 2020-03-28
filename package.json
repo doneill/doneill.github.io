@@ -25,6 +25,7 @@
     "hexo-renderer-marked": "^2.0.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "uglify-js": "^3.8.1"
   }
 }
