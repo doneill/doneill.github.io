@@ -41,9 +41,9 @@ for j in range(1, 55):
 d = {title:column for (title,column) in col}
 df = pd.DataFrame(d)
 
-///////////////////////////////////////////////////
-update states.geojson with covid data from datatable
-///////////////////////////////////////////////////
+# ///////////////////////////////////////////////////
+# update states.geojson with covid data from datatable
+# ///////////////////////////////////////////////////
 
 with open('./source/gallery/data/states.geojson') as f:
   geojson = json.load(f)
