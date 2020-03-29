@@ -7,11 +7,11 @@ var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 });
 
 function setStateColor(d) {
-    return d > 5000 ? '#bd0026' :
-      d > 2500 ? '#f03b20' :
-      d > 1000 ? '#fd8d3c' :
-      d > 500 ? '#feb24c' :
-      d > 100 ? '#fed976' :
+    return d > 10000 ? '#bd0026' :
+      d > 5000 ? '#f03b20' :
+      d > 2500 ? '#fd8d3c' :
+      d > 1000 ? '#feb24c' :
+      d > 500 ? '#fed976' :
       '#ffffb2';
   }
 
