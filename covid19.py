@@ -16,27 +16,30 @@ tr_elements = doc.xpath('//tr')
 col = []
 i = 0
 
-for header in tr_elements[0]:
-  i+=1
-  name = header.text_content()
-  col.append((name, []))
-
-for j in range(1, 55):
-  tr_element = tr_elements[j]
-
-  i = 0
-  for row in tr_element.iterchildren():
-    data = row.text_content()
-    min_data = minify(data)
-    value = min_data.replace(',', '')
-    if i > 0:
-      try:
-        data = int(value)
-      except:
-        pass
-
-    col[i][1].append(value)
+if not tr_elements:
+  print("No row elements at " + url)
+else:
+  for header in tr_elements[0]:
     i+=1
+    name = header.text_content()
+    col.append((name, []))
+
+  for j in range(1, 55):
+    tr_element = tr_elements[j]
+
+    i = 0
+    for row in tr_element.iterchildren():
+      data = row.text_content()
+      min_data = minify(data)
+      value = min_data.replace(',', '')
+      if i > 0:
+        try:
+          data = int(value)
+        except:
+          pass
+
+      col[i][1].append(value)
+      i+=1
 
 d = {title:column for (title,column) in col}
 df = pd.DataFrame(d)
