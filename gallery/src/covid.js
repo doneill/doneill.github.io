@@ -29,7 +29,7 @@ $.getJSON("./data/states.geojson", function(data) {
     var geojson = L.geoJson(data, {
         style: stateStyle,
       onEachFeature: function (feature, layer) {
-        layer.bindPopup('<b>Name: </b>'+feature.properties.NAME+'<br><b>Total Cases: </b>'+feature.properties.COVID_CONFIRMED+'<br><b>New Cases: </b>'+feature.properties.COVID_NEW+'<br><b>Total Deaths: </b>'+feature.properties.COVID_DEATHS);
+        layer.bindTooltip('<b>Name: </b>'+feature.properties.NAME+'<br><b>Total Cases: </b>'+feature.properties.COVID_CONFIRMED+'<br><b>New Cases: </b>'+feature.properties.COVID_NEW+'<br><b>Total Deaths: </b>'+feature.properties.COVID_DEATHS);
       }
     });
 
