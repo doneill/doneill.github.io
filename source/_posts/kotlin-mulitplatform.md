@@ -1,5 +1,5 @@
 ---
-title: Kotlin Mulitplatform
+title: Kotlin Multiplatform
 date: 2019-12-06 17:24:25
 tags:
 - kotlin
