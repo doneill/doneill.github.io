@@ -6,22 +6,23 @@ var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     maxzoom: 18
 });
 
-function setStateColor(d) {
-    return d > 10000 ? '#bd0026' :
-      d > 5000 ? '#f03b20' :
-      d > 2500 ? '#fd8d3c' :
-      d > 1000 ? '#feb24c' :
-      d > 500 ? '#fed976' :
-      '#ffffb2';
-  }
+function getColor(d) {
+  return d > 50000 ? '#800026' :
+      d > 10000  ? '#BD0026' :
+      d > 7500  ? '#E31A1C' :
+      d > 5000  ? '#FC4E2A' :
+      d > 2500   ? '#FD8D3C' :
+      d > 1000   ? '#FEB24C' :
+      d > 500   ? '#FED976' :
+            '#FFEDA0';
+}
 
 function stateStyle(feature) {
-    console.log(feature.properties.COVID_CONFIRMED);
     return {
-      fillColor: setStateColor(feature.properties.COVID_CONFIRMED),
-      "weight": 1,
-      fillOpacity: 0.35,
-      "opacity": 0.35
+      weight: 1,
+      fillOpacity: 0.7,
+      opacity: 0.45,
+      fillColor: getColor(feature.properties.COVID_CONFIRMED)
     };
   }
 
@@ -35,7 +36,31 @@ $.getJSON("./data/states.geojson", function(data) {
 
     geojson.getAttribution = function() { return geojsonLink; };
 
-    var map = L.map('mapid').setView([39.828329, -98.579453], 4);
+    var map = L.map('mapid').setView([37.8, -96], 4);
     tiles.addTo(map);
     geojson.addTo(map);
+
+    var legend = L.control({position: 'bottomright'});
+
+    legend.onAdd = function (map) {
+
+      var div = L.DomUtil.create('div', 'info legend'),
+        grades = [0, 500, 1000, 2500, 5000, 7500, 10000, 50000],
+        labels = [],
+        from, to;
+
+      for (var i = 0; i < grades.length; i++) {
+        from = grades[i];
+        to = grades[i + 1];
+
+        labels.push(
+          '<i style="background:' + getColor(from + 1) + '"></i> ' +
+          from + (to ? '&ndash;' + to : '+'));
+      }
+
+      div.innerHTML = labels.join('<br>');
+      return div;
+    };
+
+    legend.addTo(map);
 });
