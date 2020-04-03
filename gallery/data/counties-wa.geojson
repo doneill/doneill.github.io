@@ -798,8 +798,8 @@
         "NAME": "Wahkiakum",
         "LSAD": "County",
         "CENSUSAREA": 263.375,
-        "COVID_CONFIRMED": "",
-        "COVID_DEATHS": ""
+        "COVID_CONFIRMED": 0,
+        "COVID_DEATHS": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1158,8 +1158,8 @@
         "NAME": "Garfield",
         "LSAD": "County",
         "CENSUSAREA": 710.686,
-        "COVID_CONFIRMED": "",
-        "COVID_DEATHS": ""
+        "COVID_CONFIRMED": 0,
+        "COVID_DEATHS": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3764,8 +3764,8 @@
         "NAME": "Asotin",
         "LSAD": "County",
         "CENSUSAREA": 636.213,
-        "COVID_CONFIRMED": "",
-        "COVID_DEATHS": ""
+        "COVID_CONFIRMED": 0,
+        "COVID_DEATHS": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -11872,8 +11872,8 @@
         "NAME": "Pacific",
         "LSAD": "County",
         "CENSUSAREA": 932.658,
-        "COVID_CONFIRMED": "",
-        "COVID_DEATHS": ""
+        "COVID_CONFIRMED": 0,
+        "COVID_DEATHS": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -12404,8 +12404,8 @@
         "NAME": "Pend Oreille",
         "LSAD": "County",
         "CENSUSAREA": 1399.989,
-        "COVID_CONFIRMED": "",
-        "COVID_DEATHS": ""
+        "COVID_CONFIRMED": 0,
+        "COVID_DEATHS": 0
       },
       "geometry": {
         "type": "Polygon",

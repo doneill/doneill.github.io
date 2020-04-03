@@ -31,8 +31,8 @@ $.getJSON("./data/states.geojson", function(data) {
         style: stateStyle,
       onEachFeature: function (feature, layer) {
         layer.on({
-          mouseover: highlightFeature,
-          click: zoomToFeature
+          // mouseover: highlightFeature,
+          click: highlightFeature
         });
       }
     });
@@ -64,7 +64,7 @@ $.getJSON("./data/states.geojson", function(data) {
     info.update = function (props) {
       this._div.innerHTML = (props ?
         '<center><h4>'+props.NAME+'</h4></center><br><b>Total Cases: </b>' + props.COVID_CONFIRMED + '<br><b>New Cases: </b>' + props.COVID_NEW + '<br><b>Total Deaths: </b>' + props.COVID_DEATHS
-        : 'Hover over a state');
+        : 'Click/Tap on a state');
     };
   
     info.addTo(map);
