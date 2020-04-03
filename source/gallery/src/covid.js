@@ -18,19 +18,22 @@ function getColor(d) {
 }
 
 function stateStyle(feature) {
-    return {
-      weight: 1,
-      fillOpacity: 0.7,
-      opacity: 0.45,
-      fillColor: getColor(feature.properties.COVID_CONFIRMED)
-    };
-  }
+  return {
+    weight: 1,
+    fillOpacity: 0.7,
+    opacity: 0.45,
+    fillColor: getColor(feature.properties.COVID_CONFIRMED)
+  };
+}
 
 $.getJSON("./data/states.geojson", function(data) {
     var geojson = L.geoJson(data, {
         style: stateStyle,
       onEachFeature: function (feature, layer) {
-        layer.bindTooltip('<b>Name: </b>'+feature.properties.NAME+'<br><b>Total Cases: </b>'+feature.properties.COVID_CONFIRMED+'<br><b>New Cases: </b>'+feature.properties.COVID_NEW+'<br><b>Total Deaths: </b>'+feature.properties.COVID_DEATHS);
+        layer.on({
+          mouseover: highlightFeature,
+          click: zoomToFeature
+        });
       }
     });
 
@@ -39,6 +42,33 @@ $.getJSON("./data/states.geojson", function(data) {
     var map = L.map('mapid').setView([37.8, -96], 4);
     tiles.addTo(map);
     geojson.addTo(map);
+
+    function zoomToFeature(e) {
+      map.fitBounds(e.target.getBounds());
+    }
+
+    function highlightFeature(e) {
+      var layer = e.target;
+    
+      info.update(layer.feature.properties);
+    }
+
+    // control that shows state info on hover
+    var info = L.control();
+
+    info.onAdd = function (map) {
+      this._div = L.DomUtil.create('div', 'info');
+      this.update();
+      return this._div;
+    };
+
+    info.update = function (props) {
+      this._div.innerHTML = (props ?
+        '<center><h4>'+props.NAME+'</h4></center><br><b>Total Cases: </b>' + props.COVID_CONFIRMED + '<br><b>New Cases: </b>' + props.COVID_NEW + '<br><b>Total Deaths: </b>' + props.COVID_DEATHS
+        : 'Hover over a state');
+    };
+  
+    info.addTo(map);
 
     var legend = L.control({position: 'bottomright'});
 
