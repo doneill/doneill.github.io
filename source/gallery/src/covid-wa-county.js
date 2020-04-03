@@ -1,5 +1,5 @@
 mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
-geojsonLink = '<a href="https://www.doh.wa.gov/Emergencies/Coronavirus">Washington State Dept of Health</a>';
+geojsonLink = '<a href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>';
 
 var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; ' + mapLink + ' Contributors',
