@@ -44,11 +44,7 @@ $.getJSON("./data/states.geojson", function(data) {
     geojson.addTo(map);
 
     function zoomToFeature(e) {
-      if (Modernizr.touchevents) {
-        map.fitBounds(e.target.getBounds());  
-      } else {
-        info.update(e.target.feature.properties);
-      }
+      map.fitBounds(e.target.getBounds());
     }
 
     function highlightFeature(e) {
