@@ -32,8 +32,8 @@ $.getJSON("./data/counties-wa.geojson", function(data) {
       style: stateStyle,
       onEachFeature: function (feature, layer) {
         layer.on({
-          mouseover: highlightFeature,
-          click: zoomToFeature
+          // mouseover: highlightFeature,
+          click: highlightFeature
         });
       }
     });
@@ -65,7 +65,7 @@ $.getJSON("./data/counties-wa.geojson", function(data) {
   info.update = function (props) {
     this._div.innerHTML = (props ?
       '<center><h4>'+props.NAME+'</h4></center><br><b>Total Cases: </b>' + props.COVID_CONFIRMED + '<br><b>Total Deaths: </b>' + props.COVID_DEATHS
-      : 'Hover over a county');
+      : 'Click/Tap on a county');
   };
 
   info.addTo(map);
