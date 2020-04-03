@@ -6,36 +6,92 @@ var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     maxzoom: 18
 });
 
-function setStateColor(d) {
-    return d > 2000 ? '#bd0026' :
-      d > 750 ? '#f03b20' :
-      d > 500 ? '#fd8d3c' :
-      d > 200 ? '#feb24c' :
-      d > 50 ? '#fed976' :
-      '#ffffb2';
+  function getColor(d) {
+    return d > 2000 ? '#800026' :
+        d > 1000  ? '#BD0026' :
+        d > 750  ? '#E31A1C' :
+        d > 500  ? '#FC4E2A' :
+        d > 250   ? '#FD8D3C' :
+        d > 100   ? '#FEB24C' :
+        d > 50   ? '#FED976' :
+              '#FFEDA0';
   }
 
 function stateStyle(feature) {
-    console.log(feature.properties.COVID_CONFIRMED);
     return {
-      fillColor: setStateColor(feature.properties.COVID_CONFIRMED),
+      fillColor: getColor(feature.properties.COVID_CONFIRMED),
       "weight": 1,
-      fillOpacity: 0.35,
-      "opacity": 0.35
+      fillOpacity: 0.7,
+      "opacity": 0.80
     };
   }
 
+
 $.getJSON("./data/counties-wa.geojson", function(data) {
     var geojson = L.geoJson(data, {
-        style: stateStyle,
+      style: stateStyle,
       onEachFeature: function (feature, layer) {
-        layer.bindPopup('<b>Name: </b>'+feature.properties.NAME+'<br><b>Total Cases: </b>'+feature.properties.COVID_CONFIRMED+'<br><b>Total Deaths: </b>'+feature.properties.COVID_DEATHS);
+        layer.on({
+          mouseover: highlightFeature,
+          click: zoomToFeature
+        });
       }
     });
 
-    geojson.getAttribution = function() { return geojsonLink; };
+  geojson.getAttribution = function() { return geojsonLink; };
 
-    var map = L.map('mapid').fitBounds(geojson.getBounds());
-    tiles.addTo(map);
-    geojson.addTo(map);
+  var map = L.map('mapid').fitBounds(geojson.getBounds());
+  tiles.addTo(map);
+  geojson.addTo(map);
+
+  function zoomToFeature(e) {
+    map.fitBounds(e.target.getBounds());
+  }
+
+  function highlightFeature(e) {
+    var layer = e.target;
+    info.update(layer.feature.properties);
+  }
+
+  // control that shows state info on hover
+  var info = L.control();
+
+  info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info');
+    this.update();
+    return this._div;
+  };
+
+  info.update = function (props) {
+    this._div.innerHTML = (props ?
+      '<center><h4>'+props.NAME+'</h4></center><br><b>Total Cases: </b>' + props.COVID_CONFIRMED + '<br><b>Total Deaths: </b>' + props.COVID_DEATHS
+      : 'Hover over a county');
+  };
+
+  info.addTo(map);
+
+  var legend = L.control({position: 'bottomright'});
+
+  legend.onAdd = function (map) {
+
+    var div = L.DomUtil.create('div', 'info legend'),
+      grades = [0, 50, 100, 250, 500, 750, 1000, 2000],
+      labels = [],
+      from, to;
+
+    for (var i = 0; i < grades.length; i++) {
+      from = grades[i];
+      to = grades[i + 1];
+
+      labels.push(
+        '<i style="background:' + getColor(from + 1) + '"></i> ' +
+        from + (to ? '&ndash;' + to : '+'));
+    }
+
+    div.innerHTML = labels.join('<br>');
+    return div;
+  };
+
+  legend.addTo(map);
+
 });
