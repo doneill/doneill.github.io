@@ -47,7 +47,7 @@ $.getJSON("./data/states.geojson", function(data) {
       if (Modernizr.touchevents) {
         map.fitBounds(e.target.getBounds());  
       } else {
-        highlightFeature
+        info.update(e.target.feature.properties);
       }
     }
 
