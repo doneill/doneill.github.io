@@ -7500,7 +7500,7 @@
         "NAME": "Grant",
         "LSAD": "County",
         "CENSUSAREA": 2679.513,
-        "COVID_CONFIRMED": 73,
+        "COVID_CONFIRMED": 75,
         "COVID_DEATHS": 1
       },
       "geometry": {
@@ -8268,8 +8268,8 @@
         "NAME": "Island",
         "LSAD": "County",
         "CENSUSAREA": 208.449,
-        "COVID_CONFIRMED": 114,
-        "COVID_DEATHS": 3
+        "COVID_CONFIRMED": 119,
+        "COVID_DEATHS": 4
       },
       "geometry": {
         "type": "MultiPolygon",
