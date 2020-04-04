@@ -64,7 +64,7 @@ $.getJSON("./data/counties-wa.geojson", function(data) {
 
   info.update = function (props) {
     this._div.innerHTML = (props ?
-      '<center><h4>'+props.NAME+'</h4></center><br><b>Total Cases: </b>' + props.COVID_CONFIRMED + '<br><b>Total Deaths: </b>' + props.COVID_DEATHS
+      '<center><h4>'+ props.NAME + '</h4></center><b>' + props.UPDATED + '</b><br><h5>Total Cases: ' + props.COVID_CONFIRMED + '</h5><br><h5>Total Deaths: ' + props.COVID_DEATHS + '</h5>'
       : 'Click/Tap on a county');
   };
 
