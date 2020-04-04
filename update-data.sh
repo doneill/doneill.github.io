@@ -5,3 +5,7 @@ curl 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/ArcGIS/rest/services/ncov_ca
 # append comma after each feature
 jq -s . temp.geojson > ./source/gallery/data/counties-wa-point.geojson
 rm temp.geojson
+
+# update geojson data
+python3 wa-counties-covid.py
+python3 covid19.py
