@@ -3,7 +3,8 @@ geojsonLink = '<a href="https://github.com/CSSEGISandData/COVID-19">JHU CSSE</a>
 
 var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; ' + mapLink + ' Contributors',
-    maxzoom: 18
+    minZoom: 6,
+    maxZoom: 8
 });
 
   function getColor(d) {
