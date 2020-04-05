@@ -52,7 +52,7 @@ with open('./source/gallery/data/states.geojson') as f:
   geojson = json.load(f)
 
 for i in df.index:
-  if i < 51:
+  if i < 52:
     for feature in geojson['features']:
       stateName =  feature['properties']['NAME']
       dataStateName = str.strip(df['USAState'][i])
