@@ -13,10 +13,10 @@
       "OBJECTID": 17,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 46.98299757,
       "Long_": -118.5601734,
-      "Confirmed": 27,
+      "Confirmed": 29,
       "Recovered": 0,
       "Deaths": 0,
       "Active": 0,
@@ -41,7 +41,7 @@
       "OBJECTID": 80,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 46.18894415,
       "Long_": -117.2022851,
       "Confirmed": 4,
@@ -69,10 +69,10 @@
       "OBJECTID": 155,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 46.23946995,
       "Long_": -119.5120834,
-      "Confirmed": 176,
+      "Confirmed": 179,
       "Recovered": 0,
       "Deaths": 19,
       "Active": 0,
@@ -85,7 +85,7 @@
   },
   {
     "type": "Feature",
-    "id": 387,
+    "id": 389,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -94,10 +94,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 387,
+      "OBJECTID": 389,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 47.87046092,
       "Long_": -120.6173956,
       "Confirmed": 34,
@@ -113,7 +113,7 @@
   },
   {
     "type": "Feature",
-    "id": 427,
+    "id": 429,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -122,13 +122,13 @@
       ]
     },
     "properties": {
-      "OBJECTID": 427,
+      "OBJECTID": 429,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 48.04754642,
       "Long_": -123.9226319,
-      "Confirmed": 8,
+      "Confirmed": 9,
       "Recovered": 0,
       "Deaths": 0,
       "Active": 0,
@@ -141,7 +141,7 @@
   },
   {
     "type": "Feature",
-    "id": 439,
+    "id": 441,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -150,15 +150,15 @@
       ]
     },
     "properties": {
-      "OBJECTID": 439,
+      "OBJECTID": 441,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 45.77568046,
       "Long_": -122.4829204,
-      "Confirmed": 168,
+      "Confirmed": 185,
       "Recovered": 0,
-      "Deaths": 11,
+      "Deaths": 13,
       "Active": 0,
       "Admin2": "Clark",
       "FIPS": "53011",
@@ -169,7 +169,7 @@
   },
   {
     "type": "Feature",
-    "id": 508,
+    "id": 511,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -178,10 +178,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 508,
+      "OBJECTID": 511,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 46.29442881,
       "Long_": -117.9051983,
       "Confirmed": 1,
@@ -197,7 +197,7 @@
   },
   {
     "type": "Feature",
-    "id": 538,
+    "id": 541,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -206,10 +206,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 538,
+      "OBJECTID": 541,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 46.19074721,
       "Long_": -122.6782231,
       "Confirmed": 21,
@@ -225,7 +225,7 @@
   },
   {
     "type": "Feature",
-    "id": 674,
+    "id": 677,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -234,10 +234,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 674,
+      "OBJECTID": 677,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 47.7361335,
       "Long_": -119.692937,
       "Confirmed": 10,
@@ -253,7 +253,7 @@
   },
   {
     "type": "Feature",
-    "id": 762,
+    "id": 765,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -262,10 +262,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 762,
+      "OBJECTID": 765,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 48.4711431,
       "Long_": -118.5154041,
       "Confirmed": 1,
@@ -281,7 +281,7 @@
   },
   {
     "type": "Feature",
-    "id": 805,
+    "id": 809,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -290,13 +290,13 @@
       ]
     },
     "properties": {
-      "OBJECTID": 805,
+      "OBJECTID": 809,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 46.53351425,
       "Long_": -118.9018212,
-      "Confirmed": 70,
+      "Confirmed": 75,
       "Recovered": 0,
       "Deaths": 2,
       "Active": 0,
@@ -309,7 +309,7 @@
   },
   {
     "type": "Feature",
-    "id": 887,
+    "id": 892,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -318,13 +318,13 @@
       ]
     },
     "properties": {
-      "OBJECTID": 887,
+      "OBJECTID": 892,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 47.20753737,
       "Long_": -119.4500749,
-      "Confirmed": 88,
+      "Confirmed": 90,
       "Recovered": 0,
       "Deaths": 2,
       "Active": 0,
@@ -337,7 +337,7 @@
   },
   {
     "type": "Feature",
-    "id": 893,
+    "id": 898,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -346,13 +346,13 @@
       ]
     },
     "properties": {
-      "OBJECTID": 893,
+      "OBJECTID": 898,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 47.14003705,
       "Long_": -123.7820567,
-      "Confirmed": 6,
+      "Confirmed": 7,
       "Recovered": 0,
       "Deaths": 0,
       "Active": 0,
@@ -365,7 +365,7 @@
   },
   {
     "type": "Feature",
-    "id": 1085,
+    "id": 1092,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -374,15 +374,15 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1085,
+      "OBJECTID": 1092,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 48.14713305,
       "Long_": -122.5216407,
-      "Confirmed": 142,
+      "Confirmed": 145,
       "Recovered": 0,
-      "Deaths": 5,
+      "Deaths": 6,
       "Active": 0,
       "Admin2": "Island",
       "FIPS": "53029",
@@ -393,7 +393,7 @@
   },
   {
     "type": "Feature",
-    "id": 1141,
+    "id": 1148,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -402,10 +402,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1141,
+      "OBJECTID": 1148,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 47.75003077,
       "Long_": -123.5609704,
       "Confirmed": 27,
@@ -421,7 +421,7 @@
   },
   {
     "type": "Feature",
-    "id": 1203,
+    "id": 1210,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -430,15 +430,15 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1203,
+      "OBJECTID": 1210,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 47.49137892,
       "Long_": -121.8346131,
-      "Confirmed": 3331,
+      "Confirmed": 3486,
       "Recovered": 0,
-      "Deaths": 222,
+      "Deaths": 230,
       "Active": 0,
       "Admin2": "King",
       "FIPS": "53033",
@@ -449,7 +449,7 @@
   },
   {
     "type": "Feature",
-    "id": 1212,
+    "id": 1219,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -458,13 +458,13 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1212,
+      "OBJECTID": 1219,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 47.63479026,
       "Long_": -122.6436061,
-      "Confirmed": 111,
+      "Confirmed": 119,
       "Recovered": 0,
       "Deaths": 1,
       "Active": 0,
@@ -477,7 +477,7 @@
   },
   {
     "type": "Feature",
-    "id": 1213,
+    "id": 1220,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -486,10 +486,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1213,
+      "OBJECTID": 1220,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 47.12521214,
       "Long_": -120.679439,
       "Confirmed": 13,
@@ -505,7 +505,7 @@
   },
   {
     "type": "Feature",
-    "id": 1216,
+    "id": 1223,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -514,10 +514,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1216,
+      "OBJECTID": 1223,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 45.87325839,
       "Long_": -120.7913598,
       "Confirmed": 11,
@@ -533,7 +533,7 @@
   },
   {
     "type": "Feature",
-    "id": 1319,
+    "id": 1327,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -542,10 +542,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1319,
+      "OBJECTID": 1327,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 46.57756476,
       "Long_": -122.3925769,
       "Confirmed": 16,
@@ -561,7 +561,7 @@
   },
   {
     "type": "Feature",
-    "id": 1347,
+    "id": 1355,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -570,10 +570,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1347,
+      "OBJECTID": 1355,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 47.57705241,
       "Long_": -118.4194388,
       "Confirmed": 1,
@@ -589,7 +589,7 @@
   },
   {
     "type": "Feature",
-    "id": 1477,
+    "id": 1486,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -598,13 +598,13 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1477,
+      "OBJECTID": 1486,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 47.35007586,
       "Long_": -123.1863685,
-      "Confirmed": 16,
+      "Confirmed": 17,
       "Recovered": 0,
       "Deaths": 0,
       "Active": 0,
@@ -617,7 +617,7 @@
   },
   {
     "type": "Feature",
-    "id": 1712,
+    "id": 1723,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -626,13 +626,13 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1712,
+      "OBJECTID": 1723,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 48.54855019,
       "Long_": -119.7387224,
-      "Confirmed": 9,
+      "Confirmed": 10,
       "Recovered": 0,
       "Deaths": 0,
       "Active": 0,
@@ -645,7 +645,7 @@
   },
   {
     "type": "Feature",
-    "id": 1796,
+    "id": 1808,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -654,10 +654,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1796,
+      "OBJECTID": 1808,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 48.53234021,
       "Long_": -117.2741804,
       "Confirmed": 1,
@@ -673,7 +673,7 @@
   },
   {
     "type": "Feature",
-    "id": 1830,
+    "id": 1842,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -682,15 +682,15 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1830,
+      "OBJECTID": 1842,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 47.03892768,
       "Long_": -122.1405958,
-      "Confirmed": 717,
+      "Confirmed": 760,
       "Recovered": 0,
-      "Deaths": 12,
+      "Deaths": 14,
       "Active": 0,
       "Admin2": "Pierce",
       "FIPS": "53053",
@@ -701,7 +701,7 @@
   },
   {
     "type": "Feature",
-    "id": 2018,
+    "id": 2033,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -710,13 +710,13 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2018,
+      "OBJECTID": 2033,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 48.60182783,
       "Long_": -122.96745,
-      "Confirmed": 10,
+      "Confirmed": 12,
       "Recovered": 0,
       "Deaths": 0,
       "Active": 0,
@@ -729,7 +729,7 @@
   },
   {
     "type": "Feature",
-    "id": 2099,
+    "id": 2116,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -738,15 +738,15 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2099,
+      "OBJECTID": 2116,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 48.48171488,
       "Long_": -121.766131,
-      "Confirmed": 166,
+      "Confirmed": 169,
       "Recovered": 0,
-      "Deaths": 4,
+      "Deaths": 5,
       "Active": 0,
       "Admin2": "Skagit",
       "FIPS": "53057",
@@ -757,7 +757,7 @@
   },
   {
     "type": "Feature",
-    "id": 2100,
+    "id": 2117,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -766,10 +766,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2100,
+      "OBJECTID": 2117,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 46.02408726,
       "Long_": -121.9164403,
       "Confirmed": 2,
@@ -785,7 +785,7 @@
   },
   {
     "type": "Feature",
-    "id": 2106,
+    "id": 2123,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -794,10 +794,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2106,
+      "OBJECTID": 2123,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 48.04615983,
       "Long_": -121.7170703,
       "Confirmed": 1659,
@@ -813,7 +813,7 @@
   },
   {
     "type": "Feature",
-    "id": 2122,
+    "id": 2139,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -822,15 +822,15 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2122,
+      "OBJECTID": 2139,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 47.62113146,
       "Long_": -117.4046494,
-      "Confirmed": 222,
+      "Confirmed": 227,
       "Recovered": 0,
-      "Deaths": 12,
+      "Deaths": 13,
       "Active": 0,
       "Admin2": "Spokane",
       "FIPS": "53063",
@@ -841,7 +841,7 @@
   },
   {
     "type": "Feature",
-    "id": 2168,
+    "id": 2185,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -850,10 +850,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2168,
+      "OBJECTID": 2185,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 48.40035475,
       "Long_": -117.8542701,
       "Confirmed": 5,
@@ -869,7 +869,7 @@
   },
   {
     "type": "Feature",
-    "id": 2241,
+    "id": 2258,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -878,13 +878,13 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2241,
+      "OBJECTID": 2258,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 46.9291895,
       "Long_": -122.8290656,
-      "Confirmed": 67,
+      "Confirmed": 74,
       "Recovered": 0,
       "Deaths": 1,
       "Active": 0,
@@ -897,16 +897,16 @@
   },
   {
     "type": "Feature",
-    "id": 2330,
+    "id": 2348,
     "geometry": null,
     "properties": {
-      "OBJECTID": 2330,
+      "OBJECTID": 2348,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": null,
       "Long_": null,
-      "Confirmed": 677,
+      "Confirmed": 629,
       "Recovered": 0,
       "Deaths": 0,
       "Active": 0,
@@ -919,7 +919,7 @@
   },
   {
     "type": "Feature",
-    "id": 2381,
+    "id": 2399,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -928,10 +928,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2381,
+      "OBJECTID": 2399,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 46.2918004,
       "Long_": -123.4250831,
       "Confirmed": 2,
@@ -947,7 +947,7 @@
   },
   {
     "type": "Feature",
-    "id": 2388,
+    "id": 2406,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -956,13 +956,13 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2388,
+      "OBJECTID": 2406,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 46.23040051,
       "Long_": -118.4775539,
-      "Confirmed": 13,
+      "Confirmed": 16,
       "Recovered": 0,
       "Deaths": 0,
       "Active": 0,
@@ -975,7 +975,7 @@
   },
   {
     "type": "Feature",
-    "id": 2484,
+    "id": 2502,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -984,10 +984,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2484,
+      "OBJECTID": 2502,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 48.82227976,
       "Long_": -121.7490018,
       "Confirmed": 238,
@@ -1003,7 +1003,7 @@
   },
   {
     "type": "Feature",
-    "id": 2494,
+    "id": 2512,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -1012,10 +1012,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2494,
+      "OBJECTID": 2512,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 46.90022523,
       "Long_": -117.5241763,
       "Confirmed": 12,
@@ -1031,7 +1031,7 @@
   },
   {
     "type": "Feature",
-    "id": 2555,
+    "id": 2573,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -1040,15 +1040,15 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2555,
+      "OBJECTID": 2573,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1586296374000,
+      "Last_Update": 1586313475000,
       "Lat": 46.45738486,
       "Long_": -120.7380126,
-      "Confirmed": 380,
+      "Confirmed": 400,
       "Recovered": 0,
-      "Deaths": 12,
+      "Deaths": 17,
       "Active": 0,
       "Admin2": "Yakima",
       "FIPS": "53077",
