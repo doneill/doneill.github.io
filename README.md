@@ -1,7 +1,5 @@
-jdONeill
-=================
-
-![](https://travis-ci.org/doneill/doneill.github.io.svg?branch=develop)
+# jdONeill
+[![Build Status](https://travis-ci.org/doneill/doneill.github.io.svg?branch=develop)](https://travis-ci.org/doneill/doneill.github.io)
 
 GitHub pages site based on [Hexo](https://hexo.io/)
 
