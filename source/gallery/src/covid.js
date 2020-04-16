@@ -8,13 +8,13 @@ var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 });
 
 function getColor(d) {
-  return d > 50000 ? '#800026' :
-      d > 10000  ? '#BD0026' :
-      d > 7500  ? '#E31A1C' :
-      d > 5000  ? '#FC4E2A' :
-      d > 2500   ? '#FD8D3C' :
-      d > 1000   ? '#FEB24C' :
-      d > 500   ? '#FED976' :
+  return d > 100000 ? '#800026' :
+      d > 50000  ? '#BD0026' :
+      d > 10000  ? '#E31A1C' :
+      d > 7500  ? '#FC4E2A' :
+      d > 5000   ? '#FD8D3C' :
+      d > 2500   ? '#FEB24C' :
+      d > 1000   ? '#FED976' :
             '#FFEDA0';
 }
 
@@ -75,7 +75,7 @@ $.getJSON("./data/states.geojson", function(data) {
     legend.onAdd = function (map) {
 
       var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 500, 1000, 2500, 5000, 7500, 10000, 50000],
+        grades = [0, 1000, 2500, 5000, 7500, 10000, 50000, 100000],
         labels = [],
         from, to;
 
