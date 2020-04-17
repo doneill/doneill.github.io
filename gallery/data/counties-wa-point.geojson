@@ -13,7 +13,7 @@
       "OBJECTID": 17,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 46.98299757,
       "Long_": -118.5601734,
       "Confirmed": 40,
@@ -32,7 +32,7 @@
   },
   {
     "type": "Feature",
-    "id": 85,
+    "id": 86,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -41,20 +41,20 @@
       ]
     },
     "properties": {
-      "OBJECTID": 85,
+      "OBJECTID": 86,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 46.18894415,
       "Long_": -117.2022851,
-      "Confirmed": 8,
+      "Confirmed": 10,
       "Recovered": 0,
       "Deaths": 0,
-      "Active": 8,
+      "Active": 10,
       "Admin2": "Asotin",
       "FIPS": "53003",
       "Combined_Key": "Asotin, Washington, US",
-      "Incident_Rate": 35.4264458418209,
+      "Incident_Rate": 44.2830573022761,
       "People_Tested": null,
       "People_Hospitalized": null,
       "UID": 84053003,
@@ -63,7 +63,7 @@
   },
   {
     "type": "Feature",
-    "id": 164,
+    "id": 166,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -72,20 +72,20 @@
       ]
     },
     "properties": {
-      "OBJECTID": 164,
+      "OBJECTID": 166,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 46.23946995,
       "Long_": -119.5120834,
-      "Confirmed": 273,
+      "Confirmed": 284,
       "Recovered": 0,
-      "Deaths": 32,
-      "Active": 241,
+      "Deaths": 34,
+      "Active": 250,
       "Admin2": "Benton",
       "FIPS": "53005",
       "Combined_Key": "Benton, Washington, US",
-      "Incident_Rate": 133.568178482313,
+      "Incident_Rate": 138.950046479769,
       "People_Tested": null,
       "People_Hospitalized": null,
       "UID": 84053005,
@@ -94,7 +94,7 @@
   },
   {
     "type": "Feature",
-    "id": 410,
+    "id": 412,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -103,10 +103,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 410,
+      "OBJECTID": 412,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 47.87046092,
       "Long_": -120.6173956,
       "Confirmed": 63,
@@ -125,7 +125,7 @@
   },
   {
     "type": "Feature",
-    "id": 451,
+    "id": 453,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -134,10 +134,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 451,
+      "OBJECTID": 453,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 48.04754642,
       "Long_": -123.9226319,
       "Confirmed": 14,
@@ -156,7 +156,7 @@
   },
   {
     "type": "Feature",
-    "id": 463,
+    "id": 465,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -165,20 +165,20 @@
       ]
     },
     "properties": {
-      "OBJECTID": 463,
+      "OBJECTID": 465,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 45.77568046,
       "Long_": -122.4829204,
-      "Confirmed": 258,
+      "Confirmed": 265,
       "Recovered": 0,
       "Deaths": 15,
-      "Active": 243,
+      "Active": 250,
       "Admin2": "Clark",
       "FIPS": "53011",
       "Combined_Key": "Clark, Washington, US",
-      "Incident_Rate": 52.8427559340572,
+      "Incident_Rate": 54.2764741183145,
       "People_Tested": null,
       "People_Hospitalized": null,
       "UID": 84053011,
@@ -187,7 +187,7 @@
   },
   {
     "type": "Feature",
-    "id": 536,
+    "id": 538,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -196,10 +196,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 536,
+      "OBJECTID": 538,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 46.29442881,
       "Long_": -117.9051983,
       "Confirmed": 1,
@@ -218,7 +218,7 @@
   },
   {
     "type": "Feature",
-    "id": 570,
+    "id": 572,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -227,10 +227,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 570,
+      "OBJECTID": 572,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 46.19074721,
       "Long_": -122.6782231,
       "Confirmed": 26,
@@ -249,7 +249,7 @@
   },
   {
     "type": "Feature",
-    "id": 711,
+    "id": 714,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -258,10 +258,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 711,
+      "OBJECTID": 714,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 47.7361335,
       "Long_": -119.692937,
       "Confirmed": 34,
@@ -280,7 +280,7 @@
   },
   {
     "type": "Feature",
-    "id": 804,
+    "id": 807,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -289,10 +289,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 804,
+      "OBJECTID": 807,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 48.4711431,
       "Long_": -118.5154041,
       "Confirmed": 1,
@@ -311,7 +311,7 @@
   },
   {
     "type": "Feature",
-    "id": 851,
+    "id": 854,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -320,20 +320,20 @@
       ]
     },
     "properties": {
-      "OBJECTID": 851,
+      "OBJECTID": 854,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 46.53351425,
       "Long_": -118.9018212,
-      "Confirmed": 137,
+      "Confirmed": 156,
       "Recovered": 0,
-      "Deaths": 2,
-      "Active": 135,
+      "Deaths": 4,
+      "Active": 152,
       "Admin2": "Franklin",
       "FIPS": "53021",
       "Combined_Key": "Franklin, Washington, US",
-      "Incident_Rate": 143.874314759194,
+      "Incident_Rate": 163.827686879083,
       "People_Tested": null,
       "People_Hospitalized": null,
       "UID": 84053021,
@@ -342,7 +342,7 @@
   },
   {
     "type": "Feature",
-    "id": 942,
+    "id": 945,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -351,20 +351,20 @@
       ]
     },
     "properties": {
-      "OBJECTID": 942,
+      "OBJECTID": 945,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 47.20753737,
       "Long_": -119.4500749,
-      "Confirmed": 129,
+      "Confirmed": 133,
       "Recovered": 0,
       "Deaths": 2,
-      "Active": 127,
+      "Active": 131,
       "Admin2": "Grant",
       "FIPS": "53025",
       "Combined_Key": "Grant, Washington, US",
-      "Incident_Rate": 131.992264639375,
+      "Incident_Rate": 136.085048039045,
       "People_Tested": null,
       "People_Hospitalized": null,
       "UID": 84053025,
@@ -373,7 +373,7 @@
   },
   {
     "type": "Feature",
-    "id": 949,
+    "id": 952,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -382,10 +382,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 949,
+      "OBJECTID": 952,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 47.14003705,
       "Long_": -123.7820567,
       "Confirmed": 12,
@@ -404,7 +404,7 @@
   },
   {
     "type": "Feature",
-    "id": 1158,
+    "id": 1163,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -413,20 +413,20 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1158,
+      "OBJECTID": 1163,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 48.14713305,
       "Long_": -122.5216407,
-      "Confirmed": 163,
+      "Confirmed": 164,
       "Recovered": 0,
       "Deaths": 8,
-      "Active": 155,
+      "Active": 156,
       "Admin2": "Island",
       "FIPS": "53029",
       "Combined_Key": "Island, Washington, US",
-      "Incident_Rate": 191.447128880328,
+      "Incident_Rate": 192.621651143397,
       "People_Tested": null,
       "People_Hospitalized": null,
       "UID": 84053029,
@@ -435,7 +435,7 @@
   },
   {
     "type": "Feature",
-    "id": 1219,
+    "id": 1224,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -444,10 +444,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1219,
+      "OBJECTID": 1224,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 47.75003077,
       "Long_": -123.5609704,
       "Confirmed": 28,
@@ -466,7 +466,7 @@
   },
   {
     "type": "Feature",
-    "id": 1288,
+    "id": 1293,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -475,20 +475,20 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1288,
+      "OBJECTID": 1293,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 47.49137892,
       "Long_": -121.8346131,
-      "Confirmed": 4697,
+      "Confirmed": 4809,
       "Recovered": 0,
-      "Deaths": 312,
-      "Active": 4385,
+      "Deaths": 320,
+      "Active": 4489,
       "Admin2": "King",
       "FIPS": "53033",
       "Combined_Key": "King, Washington, US",
-      "Incident_Rate": 208.497759658946,
+      "Incident_Rate": 213.469390291648,
       "People_Tested": null,
       "People_Hospitalized": null,
       "UID": 84053033,
@@ -497,7 +497,7 @@
   },
   {
     "type": "Feature",
-    "id": 1297,
+    "id": 1302,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -506,20 +506,20 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1297,
+      "OBJECTID": 1302,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 47.63479026,
       "Long_": -122.6436061,
-      "Confirmed": 132,
+      "Confirmed": 133,
       "Recovered": 0,
       "Deaths": 1,
-      "Active": 131,
+      "Active": 132,
       "Admin2": "Kitsap",
       "FIPS": "53035",
       "Combined_Key": "Kitsap, Washington, US",
-      "Incident_Rate": 48.6236200285111,
+      "Incident_Rate": 48.9919807863029,
       "People_Tested": null,
       "People_Hospitalized": null,
       "UID": 84053035,
@@ -528,7 +528,7 @@
   },
   {
     "type": "Feature",
-    "id": 1298,
+    "id": 1303,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -537,10 +537,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1298,
+      "OBJECTID": 1303,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 47.12521214,
       "Long_": -120.679439,
       "Confirmed": 14,
@@ -559,7 +559,7 @@
   },
   {
     "type": "Feature",
-    "id": 1301,
+    "id": 1306,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -568,20 +568,20 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1301,
+      "OBJECTID": 1306,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 45.87325839,
       "Long_": -120.7913598,
-      "Confirmed": 15,
+      "Confirmed": 16,
       "Recovered": 0,
       "Deaths": 2,
-      "Active": 13,
+      "Active": 14,
       "Admin2": "Klickitat",
       "FIPS": "53039",
       "Combined_Key": "Klickitat, Washington, US",
-      "Incident_Rate": 66.8896321070234,
+      "Incident_Rate": 71.3489409141583,
       "People_Tested": null,
       "People_Hospitalized": null,
       "UID": 84053039,
@@ -590,7 +590,7 @@
   },
   {
     "type": "Feature",
-    "id": 1410,
+    "id": 1417,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -599,10 +599,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1410,
+      "OBJECTID": 1417,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 46.57756476,
       "Long_": -122.3925769,
       "Confirmed": 19,
@@ -621,7 +621,7 @@
   },
   {
     "type": "Feature",
-    "id": 1441,
+    "id": 1448,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -630,10 +630,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1441,
+      "OBJECTID": 1448,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 47.57705241,
       "Long_": -118.4194388,
       "Confirmed": 2,
@@ -652,7 +652,7 @@
   },
   {
     "type": "Feature",
-    "id": 1579,
+    "id": 1586,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -661,20 +661,20 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1579,
+      "OBJECTID": 1586,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 47.35007586,
       "Long_": -123.1863685,
-      "Confirmed": 20,
+      "Confirmed": 21,
       "Recovered": 0,
       "Deaths": 0,
-      "Active": 20,
+      "Active": 21,
       "Admin2": "Mason",
       "FIPS": "53045",
       "Combined_Key": "Mason, Washington, US",
-      "Incident_Rate": 29.9544692068057,
+      "Incident_Rate": 31.4521926671459,
       "People_Tested": null,
       "People_Hospitalized": null,
       "UID": 84053045,
@@ -683,7 +683,7 @@
   },
   {
     "type": "Feature",
-    "id": 1834,
+    "id": 1845,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -692,10 +692,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1834,
+      "OBJECTID": 1845,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 48.54855019,
       "Long_": -119.7387224,
       "Confirmed": 15,
@@ -714,7 +714,7 @@
   },
   {
     "type": "Feature",
-    "id": 1896,
+    "id": 1908,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -723,10 +723,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1896,
+      "OBJECTID": 1908,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 46.55418369,
       "Long_": -123.7285716,
       "Confirmed": 1,
@@ -745,7 +745,7 @@
   },
   {
     "type": "Feature",
-    "id": 1922,
+    "id": 1934,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -754,10 +754,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1922,
+      "OBJECTID": 1934,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 48.53234021,
       "Long_": -117.2741804,
       "Confirmed": 1,
@@ -776,7 +776,7 @@
   },
   {
     "type": "Feature",
-    "id": 1959,
+    "id": 1971,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -785,16 +785,16 @@
       ]
     },
     "properties": {
-      "OBJECTID": 1959,
+      "OBJECTID": 1971,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 47.03892768,
       "Long_": -122.1405958,
       "Confirmed": 1022,
       "Recovered": 0,
-      "Deaths": 24,
-      "Active": 998,
+      "Deaths": 28,
+      "Active": 994,
       "Admin2": "Pierce",
       "FIPS": "53053",
       "Combined_Key": "Pierce, Washington, US",
@@ -807,7 +807,7 @@
   },
   {
     "type": "Feature",
-    "id": 2169,
+    "id": 2184,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -816,10 +816,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2169,
+      "OBJECTID": 2184,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 48.60182783,
       "Long_": -122.96745,
       "Confirmed": 13,
@@ -838,7 +838,7 @@
   },
   {
     "type": "Feature",
-    "id": 2257,
+    "id": 2273,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -847,20 +847,20 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2257,
+      "OBJECTID": 2273,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 48.48171488,
       "Long_": -121.766131,
-      "Confirmed": 209,
+      "Confirmed": 218,
       "Recovered": 0,
       "Deaths": 6,
-      "Active": 203,
+      "Active": 212,
       "Admin2": "Skagit",
       "FIPS": "53057",
       "Combined_Key": "Skagit, Washington, US",
-      "Incident_Rate": 161.758445880577,
+      "Incident_Rate": 168.724120583569,
       "People_Tested": null,
       "People_Hospitalized": null,
       "UID": 84053057,
@@ -869,7 +869,7 @@
   },
   {
     "type": "Feature",
-    "id": 2258,
+    "id": 2274,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -878,10 +878,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2258,
+      "OBJECTID": 2274,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 46.02408726,
       "Long_": -121.9164403,
       "Confirmed": 3,
@@ -900,7 +900,7 @@
   },
   {
     "type": "Feature",
-    "id": 2265,
+    "id": 2281,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -909,20 +909,20 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2265,
+      "OBJECTID": 2281,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 48.04615983,
       "Long_": -121.7170703,
-      "Confirmed": 1988,
+      "Confirmed": 2032,
       "Recovered": 0,
-      "Deaths": 80,
-      "Active": 1908,
+      "Deaths": 86,
+      "Active": 1946,
       "Admin2": "Snohomish",
       "FIPS": "53061",
       "Combined_Key": "Snohomish, Washington, US",
-      "Incident_Rate": 241.824730592896,
+      "Incident_Rate": 247.176988211653,
       "People_Tested": null,
       "People_Hospitalized": null,
       "UID": 84053061,
@@ -931,7 +931,7 @@
   },
   {
     "type": "Feature",
-    "id": 2281,
+    "id": 2297,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -940,10 +940,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2281,
+      "OBJECTID": 2297,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 47.62113146,
       "Long_": -117.4046494,
       "Confirmed": 286,
@@ -962,7 +962,7 @@
   },
   {
     "type": "Feature",
-    "id": 2331,
+    "id": 2347,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -971,10 +971,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2331,
+      "OBJECTID": 2347,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 48.40035475,
       "Long_": -117.8542701,
       "Confirmed": 7,
@@ -993,7 +993,7 @@
   },
   {
     "type": "Feature",
-    "id": 2408,
+    "id": 2424,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -1002,20 +1002,20 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2408,
+      "OBJECTID": 2424,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 46.9291895,
       "Long_": -122.8290656,
-      "Confirmed": 82,
+      "Confirmed": 86,
       "Recovered": 0,
       "Deaths": 1,
-      "Active": 81,
+      "Active": 85,
       "Admin2": "Thurston",
       "FIPS": "53067",
       "Combined_Key": "Thurston, Washington, US",
-      "Incident_Rate": 28.223696891263,
+      "Incident_Rate": 29.6004625932759,
       "People_Tested": null,
       "People_Hospitalized": null,
       "UID": 84053067,
@@ -1024,19 +1024,19 @@
   },
   {
     "type": "Feature",
-    "id": 2502,
+    "id": 2519,
     "geometry": null,
     "properties": {
-      "OBJECTID": 2502,
+      "OBJECTID": 2519,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": null,
       "Long_": null,
-      "Confirmed": 272,
+      "Confirmed": 334,
       "Recovered": 0,
       "Deaths": 0,
-      "Active": 272,
+      "Active": 334,
       "Admin2": "Unassigned",
       "FIPS": "90053",
       "Combined_Key": "Unassigned, Washington, US",
@@ -1049,7 +1049,7 @@
   },
   {
     "type": "Feature",
-    "id": 2557,
+    "id": 2574,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -1058,10 +1058,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2557,
+      "OBJECTID": 2574,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 46.2918004,
       "Long_": -123.4250831,
       "Confirmed": 2,
@@ -1080,7 +1080,7 @@
   },
   {
     "type": "Feature",
-    "id": 2564,
+    "id": 2581,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -1089,10 +1089,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2564,
+      "OBJECTID": 2581,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 46.23040051,
       "Long_": -118.4775539,
       "Confirmed": 26,
@@ -1111,7 +1111,7 @@
   },
   {
     "type": "Feature",
-    "id": 2666,
+    "id": 2684,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -1120,10 +1120,10 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2666,
+      "OBJECTID": 2684,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 48.82227976,
       "Long_": -121.7490018,
       "Confirmed": 273,
@@ -1142,7 +1142,7 @@
   },
   {
     "type": "Feature",
-    "id": 2677,
+    "id": 2695,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -1151,20 +1151,20 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2677,
+      "OBJECTID": 2695,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 46.90022523,
       "Long_": -117.5241763,
-      "Confirmed": 13,
+      "Confirmed": 14,
       "Recovered": 0,
       "Deaths": 0,
-      "Active": 13,
+      "Active": 14,
       "Admin2": "Whitman",
       "FIPS": "53075",
       "Combined_Key": "Whitman, Washington, US",
-      "Incident_Rate": 25.9460322529139,
+      "Incident_Rate": 27.9418808877535,
       "People_Tested": null,
       "People_Hospitalized": null,
       "UID": 84053075,
@@ -1173,7 +1173,7 @@
   },
   {
     "type": "Feature",
-    "id": 2741,
+    "id": 2759,
     "geometry": {
       "type": "Point",
       "coordinates": [
@@ -1182,20 +1182,20 @@
       ]
     },
     "properties": {
-      "OBJECTID": 2741,
+      "OBJECTID": 2759,
       "Province_State": "Washington",
       "Country_Region": "US",
-      "Last_Update": 1587055709000,
+      "Last_Update": 1587094251000,
       "Lat": 46.45738486,
       "Long_": -120.7380126,
-      "Confirmed": 674,
+      "Confirmed": 707,
       "Recovered": 0,
       "Deaths": 29,
-      "Active": 645,
+      "Active": 678,
       "Admin2": "Yakima",
       "FIPS": "53077",
       "Combined_Key": "Yakima, Washington, US",
-      "Incident_Rate": 268.661832879584,
+      "Incident_Rate": 281.815898881107,
       "People_Tested": null,
       "People_Hospitalized": null,
       "UID": 84053077,
