@@ -4,6 +4,8 @@
 *.log
 *.iml
 *.jshintrc
+*.sublime-workspace
+*.sublime-project
 
 # js
 .tern-port
