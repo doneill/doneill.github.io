@@ -7,7 +7,11 @@ tags:
 ---
 
 
-Multiplatform projects is a feature in Kotlin that allows for sharing Kotlin code between iOS and Android. Android leverages the Kotlin/JVM and iOS uses Kotlin/Native which allows iOS apps to call Kotlin from Swift.  This post will step us through getting an environment setup for Android and iOS development.  A completed template project is available on [GitHub](https://github.com/doneill/kt-mulitplatform).
+Multiplatform projects is a feature in Kotlin that allows for sharing Kotlin code between iOS and Android. Android leverages the Kotlin/JVM and iOS uses Kotlin/Native which allows iOS apps to call Kotlin from Swift.  This post will step us through getting an environment setup for Android and iOS development.  A completed template project is available on [GitHub](https://github.com/doneill/kotlin-multiplatform-template).
+
+## Update 06/28/2020
+
+These steps should still work if followed in order but the original repo on [GitHub](https://github.com/doneill/kotlin-multiplatform-template) has changed beyond just setting up the dev environment and can still be used as a guide to accompany this post. 
 
 ## Local Environment
 - [Android Studio](https://developer.android.com/studio)
