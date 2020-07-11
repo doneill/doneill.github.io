@@ -3,6 +3,10 @@ title: gallery
 date: 2019-12-27 17:42:43
 ---
 
+## Map Plugins
+- [Map Preview](https://github.com/doneill/MapPreview)
+    Preview map layer files in Sublime Text 3
+
 ## Web Maps
 
 - [Seattle Neighborhoods](seattle-neighborhoods.html)
