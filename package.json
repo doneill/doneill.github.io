@@ -9,25 +9,25 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "4.2.1"
+    "version": "5.0.2"
   },
   "dependencies": {
-    "constantinople": "^3.1.2",
+    "constantinople": "^4.0.1",
     "fulcrum-app": "^2.5.0",
-    "hexo": "^4.2.1",
+    "hexo": "^5.0.2",
     "hexo-asset-link": "^2.0.2",
     "hexo-deployer-git": "^2.1.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-cname": "^0.3.0",
-    "hexo-generator-index": "^1.0.0",
+    "hexo-generator-index": "^2.0.0",
     "hexo-generator-tag": "^1.0.0",
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-jade": "^0.5.0",
-    "hexo-renderer-marked": "^2.0.0",
+    "hexo-renderer-marked": "^3.0.0",
     "hexo-renderer-stylus": "^1.1.0",
-    "hexo-server": "^1.0.0",
+    "hexo-server": "^2.0.0",
     "minimist": "^1.2.5",
-    "uglify-js": "^3.10.0"
+    "uglify-js": "^3.10.1"
   }
 }
