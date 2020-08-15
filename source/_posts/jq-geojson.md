@@ -20,7 +20,7 @@ Sample output
 {"type":"FeatureCollection","features":[{"type":"Feature","id":1,"geometry":{"type":"Point","coordinates":[-82.4617065799999,34.2233337800001]},"properties":{"OBJECTID":1,"Province_State":"South Carolina","Country_Region":"US","Last_Update":1585698236000,"Lat":34.22333378,"Long_":-82.46170658,"Confirmed":4,"Recovered":0,"Deaths":0,"Active":0,"Admin2":"Abbeville","FIPS":"45001","Combined_Key":"Abbeville, South Carolina, US","Incident_Rate":null,"People_Tested":null}},
 ```
 
-The raw geojson format isn't returned so nicely formatted so we can pipe the response through [jq](https://stedolan.github.io/jq/) to pretty print it: 
+The raw geojson format isn't returned so nicely formatted so we can pipe the response through [jq](https://stedolan.github.io/jq/) to pretty print it:
 
 ```bash
 curl 'https://services1.arcgis.com/0MSEUqKaxRlEPj5g/ArcGIS/rest/services/ncov_cases_US/FeatureServer/0/query?where=1%3D1&outFields=*&f=geojson&token=' | jq '.'
