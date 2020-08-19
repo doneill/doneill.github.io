@@ -7,6 +7,10 @@
 *.sublime-workspace
 *.sublime-project
 
+## posts
+*.obsidian
+obsidian*
+
 # js
 .tern-port
 yarn.lock
