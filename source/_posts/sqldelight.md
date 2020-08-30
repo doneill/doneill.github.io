@@ -11,7 +11,7 @@ tags:
 
 ## Dependency setup
 
-First we will get started adding the most basic dependencies, adding the plugin classpath to the project, the common library dependencies, and Android app dependencies. 
+First we will get started adding the most basic dependencies, adding the plugin classpath to the project, the common library dependencies, and Android app dependencies.
 
 ```kotlin
 buildscript {
@@ -69,7 +69,7 @@ And that's it for a very basic setup, check out this [commit](https://github.com
 
 ## Implementation
 
-SQLDelight generates Kotlin source files which can be used to create and interact with the database.  Create your initial database schema with a `*.sq` file.  This file always represents the latest schema for an empty database.  You need to create the SQL source file in the package defined above in the `commonMain` sourceset, e.g. **common/src/commonMain/sqldelight/com/example/package**.  In this example we will be persisting some weather station data.  
+SQLDelight generates Kotlin source files which can be used to create and interact with the database.  Create your initial database schema with a `*.sq` file.  This file always represents the latest schema for an empty database.  You need to create the SQL source file in the package defined above in the `commonMain` sourceset, e.g. **common/src/commonMain/sqldelight/com/example/package**.  In this example we will be persisting some weather station data.
 
 ```sql
 CREATE TABLE Weather (
@@ -98,7 +98,7 @@ DELETE FROM Weather;
 
 ### Drivers
 
-Implement the platform driver factories to create the database on both Android and iOS platforms.  Include the following inside **common/src/commonMain/kotlin/** source set: 
+Implement the platform driver factories to create the database on both Android and iOS platforms.  Include the following inside **common/src/commonMain/kotlin/** source set:
 
 ```kotlin
 expect class KmpDriverFactory {
