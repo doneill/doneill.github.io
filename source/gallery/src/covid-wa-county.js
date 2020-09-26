@@ -8,12 +8,12 @@ var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 });
 
   function getColor(d) {
-    return d > 5000 ? '#800026' :
-        d > 2000  ? '#BD0026' :
-        d > 1000  ? '#E31A1C' :
-        d > 500  ? '#FC4E2A' :
-        d > 100   ? '#FD8D3C' :
-        d > 25   ? '#FEB24C' :
+    return d > 10000 ? '#800026' :
+        d > 5000  ? '#BD0026' :
+        d > 2000  ? '#E31A1C' :
+        d > 1000  ? '#FC4E2A' :
+        d > 500   ? '#FD8D3C' :
+        d > 100   ? '#FEB24C' :
         d > 0   ? '#FED976' :
               '#33000000';
   }
@@ -76,7 +76,7 @@ $.getJSON("./data/counties-wa.geojson", function(data) {
   legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info legend'),
-      grades = [0, 0, 25, 100, 500, 1000, 2000, 5000],
+      grades = [0, 0, 100, 500, 1000, 2000, 5000, 10000],
       labels = [],
       from, to;
 
