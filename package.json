@@ -12,7 +12,7 @@
     "version": "5.0.2"
   },
   "dependencies": {
-    "constantinople": "^4.0.1",
+    "constantinople": "^3.1.1",
     "fulcrum-app": "^2.5.0",
     "hexo": "^5.0.2",
     "hexo-asset-link": "^2.0.2",
