@@ -8,13 +8,13 @@ var tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 });
 
 function getColor(d) {
-  return d > 300000 ? '#800026' :
-      d > 100000  ? '#BD0026' :
-      d > 75000  ? '#E31A1C' :
-      d > 50000  ? '#FC4E2A' :
-      d > 25000   ? '#FD8D3C' :
-      d > 10000   ? '#FEB24C' :
-      d > 3000   ? '#FED976' :
+  return d > 500000 ? '#800026' :
+      d > 250000  ? '#BD0026' :
+      d > 100000  ? '#E31A1C' :
+      d > 75000  ? '#FC4E2A' :
+      d > 50000   ? '#FD8D3C' :
+      d > 25000   ? '#FEB24C' :
+      d > 10000   ? '#FED976' :
             '#FFEDA0';
 }
 
@@ -67,7 +67,7 @@ $.getJSON("./data/states.geojson", function(data) {
         '<center><h4>'+props.NAME+'</h4></center><br><b>Total Cases: </b>' + props.COVID_CONFIRMED + '<br><b>New Cases: </b>' + props.COVID_NEW + '<br><b>Total Deaths: </b>' + props.COVID_DEATHS
         : 'Click/Tap on a state');
     };
-  
+
     info.addTo(map);
 
     var legend = L.control({position: 'bottomright'});
@@ -75,7 +75,7 @@ $.getJSON("./data/states.geojson", function(data) {
     legend.onAdd = function (map) {
 
       var div = L.DomUtil.create('div', 'info legend'),
-        grades = [0, 3000, 10000, 25000, 50000, 75000, 100000, 300000],
+        grades = [0, 10000, 25000, 50000, 75000, 100000, 250000, 500000],
         labels = [],
         from, to;
 
