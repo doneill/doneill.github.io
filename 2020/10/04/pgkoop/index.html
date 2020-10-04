@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Koop uses providers to transform data from one spatial format to another by converting the input data to GeoJSON and using output plugins to transform to various outputs, one officially supported outp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Koop PostGIS Provider">
+<meta property="og:url" content="http://gh.jdoneill.com/2020/10/04/pgkoop/index.html">
+<meta property="og:site_name" content="jdONeill">
+<meta property="og:description" content="Koop uses providers to transform data from one spatial format to another by converting the input data to GeoJSON and using output plugins to transform to various outputs, one officially supported outp">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://gh.jdoneill.com/2020/10/04/pgkoop/agol.png">
+<meta property="og:image" content="http://gh.jdoneill.com/2020/10/04/pgkoop/leaflet.png">
+<meta property="og:image" content="http://gh.jdoneill.com/2020/10/04/pgkoop/qgis.png">
+<meta property="article:published_time" content="2020-10-04T18:18:25.000Z">
+<meta property="article:modified_time" content="2020-10-04T18:18:25.000Z">
+<meta property="article:author" content="jdONeill">
+<meta property="article:tag" content="esri">
+<meta property="article:tag" content="geojson">
+<meta property="article:tag" content="leaflet">
+<meta property="article:tag" content="geoservices">
+<meta property="article:tag" content="arcgis">
+<meta property="article:tag" content="postgis">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://gh.jdoneill.com/2020/10/04/pgkoop/agol.png">
+    
+    
+    <!-- title -->
+    <title>Koop PostGIS Provider</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- Leaflet -->
+    
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="jdONeill" type="application/atom+xml" />
+    
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/gallery/">Gallery</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2020/08/14/mappreview/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://gh.jdoneill.com/2020/10/04/pgkoop/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&text=Koop PostGIS Provider"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&title=Koop PostGIS Provider"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&is_video=false&description=Koop PostGIS Provider"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Koop PostGIS Provider&body=Check out this article: http://gh.jdoneill.com/2020/10/04/pgkoop/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&title=Koop PostGIS Provider"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&title=Koop PostGIS Provider"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&title=Koop PostGIS Provider"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&title=Koop PostGIS Provider"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&name=Koop PostGIS Provider&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://gh.jdoneill.com/2020/10/04/pgkoop/&t=Koop PostGIS Provider"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Database-configuration"><span class="toc-number">1.</span> <span class="toc-text">Database configuration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Service-endpoint-format"><span class="toc-number">2.</span> <span class="toc-text">Service endpoint format</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Generate-GeoJSON"><span class="toc-number">3.</span> <span class="toc-text">Generate GeoJSON</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Working-with-the-data"><span class="toc-number">4.</span> <span class="toc-text">Working with the data</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ArcGIS-Online-WebMap"><span class="toc-number">4.1.</span> <span class="toc-text">ArcGIS Online WebMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Esri-Leaflet"><span class="toc-number">4.2.</span> <span class="toc-text">Esri Leaflet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#QGIS"><span class="toc-number">4.3.</span> <span class="toc-text">QGIS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Query"><span class="toc-number">4.4.</span> <span class="toc-text">Query</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Moving-forward"><span class="toc-number">5.</span> <span class="toc-text">Moving forward</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Koop PostGIS Provider
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">jdONeill</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-10-04T18:18:25.000Z" itemprop="datePublished">2020-10-04</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/arcgis/" rel="tag">arcgis</a>, <a class="tag-link-link" href="/tags/esri/" rel="tag">esri</a>, <a class="tag-link-link" href="/tags/geojson/" rel="tag">geojson</a>, <a class="tag-link-link" href="/tags/geoservices/" rel="tag">geoservices</a>, <a class="tag-link-link" href="/tags/leaflet/" rel="tag">leaflet</a>, <a class="tag-link-link" href="/tags/postgis/" rel="tag">postgis</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><a target="_blank" rel="noopener" href="https://koopjs.github.io/">Koop</a> uses providers to transform data from one spatial format to another by converting the input data to GeoJSON and using output plugins to transform to various outputs, one officially supported output is <a target="_blank" rel="noopener" href="https://geoservices.github.io/">GeoServices</a>.  The <a target="_blank" rel="noopener" href="https://github.com/doneill/koop-provider-pg">koop provider pg</a> uses PostGIS Spatial data as the input data to be transformed allowing ArcGIS clients access to the data.  </p>
+<p>To get started, clone the <a target="_blank" rel="noopener" href="https://github.com/doneill/koop-provider-pg">repo</a></p>
+<h2 id="Database-configuration"><a href="#Database-configuration" class="headerlink" title="Database configuration"></a>Database configuration</h2><p>To get started using the <strong>pg</strong> provider and work with your PostGIS data in ArcGIS clients you need to setup your database connection. </p>
+<ul>
+<li>Open the <strong>config/default.json</strong> file and set the connection parameters as follows: </li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;db&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;host&quot;</span>: <span class="string">&quot;host&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;port&quot;</span>: <span class="number">5432</span>,</span><br><span class="line">    <span class="attr">&quot;database&quot;</span>: <span class="string">&quot;dbname&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;user&quot;</span>: <span class="string">&quot;user&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;password&quot;</span>: <span class="string">&quot;password&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The provider will now use this connection to query the data.</p>
+<h2 id="Service-endpoint-format"><a href="#Service-endpoint-format" class="headerlink" title="Service endpoint format"></a>Service endpoint format</h2><p>Once we have a database connection configured we can run the server to generate output routes to the connection PostGIS data provided by the <strong>pg</strong> provider.  Koop provides a wrapper around an Express.js server to listen to incoming requests, you start the server with <code>npm start</code>. </p>
+<p>The Koop service endpoint format is as follows: <code>&#123;koop-server-instance&#125;/&#123;provider-framework&#125;/&#123;output-type&#125;</code>.  For the <strong>pg</strong> provider those are defined by the following:  </p>
+<ul>
+<li>koop server instance: <a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a></li>
+<li>provider fragment: /pg/rest/services/<code>$&#123;schema&#125;.$&#123;table&#125;</code></li>
+<li>output fragment: FeatureServer/0</li>
+</ul>
+<p>Where you provide the <code>$&#123;schema&#125;.$&#123;table&#125;</code> of the data you want to work with.</p>
+<h2 id="Generate-GeoJSON"><a href="#Generate-GeoJSON" class="headerlink" title="Generate GeoJSON"></a>Generate GeoJSON</h2><p>Koop providers responsibilities include formatting requrests to the data source, in this case PostGIS, and convert the data to GeoJSON.  PostGIS can return the geometry as a GeoJSON feature object using <a target="_blank" rel="noopener" href="https://postgis.net/docs/ST_AsGeoJSON.html">ST_AsGeoJSON</a>.  To build a feature collection the <strong>pg</strong> provider uses the following query: </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> jsonb_build_object(</span><br><span class="line">    <span class="string">&#x27;type&#x27;</span>,     <span class="string">&#x27;FeatureCollection&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;features&#x27;</span>, jsonb_agg(features.feature)</span><br><span class="line">) <span class="keyword">FROM</span> (</span><br><span class="line">  <span class="keyword">SELECT</span> jsonb_build_object(</span><br><span class="line">    <span class="string">&#x27;type&#x27;</span>,       <span class="string">&#x27;Feature&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;id&#x27;</span>,         gid,</span><br><span class="line">    <span class="string">&#x27;geometry&#x27;</span>,   ST_AsGeoJSON(ST_Transform(geom,<span class="number">4326</span>))::jsonb,</span><br><span class="line">    <span class="string">&#x27;properties&#x27;</span>, to_jsonb(inputs) - <span class="string">&#x27;gid&#x27;</span> - <span class="string">&#x27;geom&#x27;</span></span><br><span class="line">  ) <span class="keyword">AS</span> feature</span><br><span class="line">  <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> $[<span class="keyword">table</span>:<span class="keyword">raw</span>]) inputs) features;</span><br></pre></td></tr></table></figure>
+
+<p>The <code>$[table:raw]</code> is provided by the <strong>pg</strong> provider fragment</p>
+<h2 id="Working-with-the-data"><a href="#Working-with-the-data" class="headerlink" title="Working with the data"></a>Working with the data</h2><p>Now that we have defined the url schema, we can start working with the data in various GeoService clients.</p>
+<h3 id="ArcGIS-Online-WebMap"><a href="#ArcGIS-Online-WebMap" class="headerlink" title="ArcGIS Online WebMap"></a>ArcGIS Online WebMap</h3><p>An easy way to confirm the data is working is by opening it up in a webmap provided by ArcGIS Online.  You can use the <code>url</code> parameter to get access to the feature service and visualize it in a browser. </p>
+<p><code>https://www.arcgis.com/home/webmap/viewer.html?url=http://localhost:8080/pg/$&#123;schema&#125;.$&#123;table&#125;/FeatureServer/</code></p>
+<p><img src="/2020/10/04/pgkoop/agol.png" alt="AGOL" title="PostGIS Geoservice in AGOL"></p>
+<h3 id="Esri-Leaflet"><a href="#Esri-Leaflet" class="headerlink" title="Esri Leaflet"></a>Esri Leaflet</h3><p>There is an example web application provided in the repo in the <strong>src/view/</strong> folder where you can replace the <code>$&#123;schema&#125;.$&#123;table&#125;</code> in <em>map.js</em> to see the layer rendered in an Esri Leaflet app.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// esri leaflet feature layer</span></span><br><span class="line">L.esri.featureLayer(&#123;</span><br><span class="line">    url: <span class="string">&#x27;http://localhost:8080/pg/$&#123;schema&#125;.$&#123;table&#125;/FeatureServer/layers&#x27;</span></span><br><span class="line">  &#125;).addTo(map);</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/10/04/pgkoop/leaflet.png" alt="Esri Leaflet" title="PostGIS Geoservice in Esri Leaflet"></p>
+<h3 id="QGIS"><a href="#QGIS" class="headerlink" title="QGIS"></a>QGIS</h3><p>You can add ArcGIS Feature Services in QGIS using the <strong>Data Source Manager &gt; ArcGIS Feature Service &gt; New Connection</strong>.  Name the layer appropriately and paste your Koop pg url with the following format: </p>
+<p><code>http://localhost:8080/pg/rest/services/$&#123;schema&#125;.$&#123;table&#125;/FeatureServer</code></p>
+<p>After saving the connection by pressing <strong>Ok</strong> you should see the feature layer listed once connected to the service.   You can then add the layer to your map.  </p>
+<p><img src="/2020/10/04/pgkoop/qgis.png" alt="QGIS" title="PostGIS Geoservice in QGIS"></p>
+<h3 id="Query"><a href="#Query" class="headerlink" title="Query"></a>Query</h3><p>The query operation is supported on Koop services and you can use the result in any of the clients listed above.  Below is an example query where you can define the <strong>outFields</strong> with comma separated <code>$&#123;fields-2-return&#125;</code>: </p>
+<p><code>http://localhost:8080/pg/rest/services/$&#123;schema&#125;.$&#123;table&#125;/FeatureServer/0/query?where=1=1&amp;outFields=$&#123;fields-2-return&#125;&amp;returnGeometry=true&amp;f=json</code></p>
+<h2 id="Moving-forward"><a href="#Moving-forward" class="headerlink" title="Moving forward"></a>Moving forward</h2><p>Combine this provider with a web application to display a catalog of feature services provided by the PostGIS database connection.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/gallery/">Gallery</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Database-configuration"><span class="toc-number">1.</span> <span class="toc-text">Database configuration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Service-endpoint-format"><span class="toc-number">2.</span> <span class="toc-text">Service endpoint format</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Generate-GeoJSON"><span class="toc-number">3.</span> <span class="toc-text">Generate GeoJSON</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Working-with-the-data"><span class="toc-number">4.</span> <span class="toc-text">Working with the data</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ArcGIS-Online-WebMap"><span class="toc-number">4.1.</span> <span class="toc-text">ArcGIS Online WebMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Esri-Leaflet"><span class="toc-number">4.2.</span> <span class="toc-text">Esri Leaflet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#QGIS"><span class="toc-number">4.3.</span> <span class="toc-text">QGIS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Query"><span class="toc-number">4.4.</span> <span class="toc-text">Query</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Moving-forward"><span class="toc-number">5.</span> <span class="toc-text">Moving forward</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://gh.jdoneill.com/2020/10/04/pgkoop/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&text=Koop PostGIS Provider"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&title=Koop PostGIS Provider"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&is_video=false&description=Koop PostGIS Provider"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Koop PostGIS Provider&body=Check out this article: http://gh.jdoneill.com/2020/10/04/pgkoop/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&title=Koop PostGIS Provider"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&title=Koop PostGIS Provider"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&title=Koop PostGIS Provider"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&title=Koop PostGIS Provider"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://gh.jdoneill.com/2020/10/04/pgkoop/&name=Koop PostGIS Provider&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://gh.jdoneill.com/2020/10/04/pgkoop/&t=Koop PostGIS Provider"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 jdONeill
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/gallery/">Gallery</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
