@@ -32,9 +32,17 @@ To get started using the **pg** provider and work with your PostGIS data in ArcG
 
 The provider will now use this connection to query the data.
 
-## Service endpoint format
-Once we have a database connection configured we can run the server to generate output routes to the connection PostGIS data provided by the **pg** provider.  Koop provides a wrapper around an Express.js server to listen to incoming requests, you start the server with `npm start`.
+## Start the server
+Once we have a database connection configured we can run the server to generate output routes to the connection PostGIS data provided by the **pg** provider. Koop provides a wrapper around an Express.js server to listen to incoming requests.  From the root of the repo project we can install the required npm modules and start the server with the following:
 
+```bash
+# install modules
+=> npm start
+# start the server
+=> npm start
+```
+
+## Service endpoint format
 The Koop service endpoint format is as follows: `{koop-server-instance}/{provider-framework}/{output-type}`.  For the **pg** provider those are defined by the following:
 
 - koop server instance: http://localhost:8080
@@ -99,4 +107,4 @@ The query operation is supported on Koop services and you can use the result in 
 `http://localhost:8080/pg/rest/services/${schema}.${table}/FeatureServer/0/query?where=1=1&outFields=${fields-2-return}&returnGeometry=true&f=json`
 
 ## Moving forward
-Combine this provider with a web application to display a catalog of feature services provided by the PostGIS database connection.
+Dive deeper into the source in the [koop provider pg repo](https://github.com/doneill/koop-provider-pg) and read more about koop providers [here](https://koopjs.github.io/docs/usage/provider).  Future considerations to combine this provider with a web application to display a catalog of feature services provided by the PostGIS database connection.
