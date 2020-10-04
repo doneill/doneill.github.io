@@ -1,6 +1,6 @@
 ---
 title: Koop PostGIS Provider
-date: 2020-10-03 18:18:25
+date: 2020-10-04 18:18:25
 tags:
 - esri
 - geoservices
@@ -11,6 +11,8 @@ tags:
 ---
 
 [Koop](https://koopjs.github.io) uses providers to transform data from one spatial format to another by converting the input data to GeoJSON and using output plugins to transform to various outputs, one officially supported output is [GeoServices](https://geoservices.github.io/).  The [koop provider pg](https://github.com/doneill/koop-provider-pg) uses PostGIS Spatial data as the input data to be transformed allowing ArcGIS clients access to the data.  
+
+To get started, clone the [repo](https://github.com/doneill/koop-provider-pg)
 
 
 ## Database configuration
@@ -70,7 +72,7 @@ An easy way to confirm the data is working is by opening it up in a webmap provi
 
 `https://www.arcgis.com/home/webmap/viewer.html?url=http://localhost:8080/pg/${schema}.${table}/FeatureServer/`
 
-![AGOL](koop-pg/agol.png)
+![AGOL](pgkoop/agol.png "PostGIS Geoservice in AGOL")
 
 ### Esri Leaflet
 There is an example web application provided in the repo in the **src/view/** folder where you can replace the `${schema}.${table}` in *map.js* to see the layer rendered in an Esri Leaflet app.
@@ -82,7 +84,7 @@ L.esri.featureLayer({
   }).addTo(map);
 ```
 
-![Esri Leaflet](koop-pg/leaflet.png)
+![Esri Leaflet](pgkoop/leaflet.png "PostGIS Geoservice in Esri Leaflet")
 
 ### QGIS
 You can add ArcGIS Feature Services in QGIS using the **Data Source Manager > ArcGIS Feature Service > New Connection**.  Name the layer appropriately and paste your Koop pg url with the following format: 
@@ -91,7 +93,7 @@ You can add ArcGIS Feature Services in QGIS using the **Data Source Manager > Ar
 
 After saving the connection by pressing **Ok** you should see the feature layer listed once connected to the service.   You can then add the layer to your map.  
 
-![QGIS](koop-pg/qgis.png)
+![QGIS](pgkoop/qgis.png "PostGIS Geoservice in QGIS")
 
 ### Query
 The query operation is supported on Koop services and you can use the result in any of the clients listed above.  Below is an example query where you can define the **outFields** with comma separated `${fields-2-return}`: 
