@@ -12,6 +12,24 @@ tags:
 
 [Koop](https://koopjs.github.io) uses providers to transform data from one spatial format to another by converting the input data to GeoJSON and using output plugins to transform to various outputs, one officially supported output is [GeoServices](https://geoservices.github.io/).  The [koop provider pg](https://github.com/doneill/koop-provider-pg) uses PostGIS Spatial data as the input data to be transformed allowing ArcGIS clients access to the data.
 
+## Update 11/06/2020
+This post is about working with the Koop PostGIS provider from a developer perspective to configure the provider for your databse configuration. Recent updates have allowed end users to configure the database without requiring developer access by setting the following Postgres database environment variables:
+
+```
+PG_HOST=<host>
+PG_PORT=<port>
+PG_DATABASE=<database>
+PG_USER=<user>
+PG_PASSWORD=<password>
+```
+
+This allows for the provider to be published to [npm package respository](https://www.npmjs.com/package/koop-provider-pg) and installed you your Koop application using the [Koop CLI](https://www.npmjs.com/package/koop-provider-pg):
+
+```
+=> koop add provider koop-provider-pg
+```
+
+Please continue reading about configuring the provider from source and/or working with the data once you have the provider configured.
 
 ## Database configuration
 To get started using the **pg** provider and work with your PostGIS data in ArcGIS clients you need clone the [repo](https://github.com/doneill/koop-provider-pg) and setup your database connection.
