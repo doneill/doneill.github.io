@@ -29,7 +29,7 @@ This allows for the provider to be published to [npm package respository](https:
 => koop add provider koop-provider-pg
 ```
 
-Please continue reading about configuring the provider from source and/or working with the data once you have the provider configured.
+Continue reading about configuring the provider from source and/or working with the data once you have the provider configured.
 
 ## Database configuration
 To get started using the **pg** provider and work with your PostGIS data in ArcGIS clients you need clone the [repo](https://github.com/doneill/koop-provider-pg) and setup your database connection.
