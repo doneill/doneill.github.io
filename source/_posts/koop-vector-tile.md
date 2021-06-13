@@ -58,7 +58,7 @@ The server will now support both GeoServices and Vector Tiles as output formats 
 /pg/rest/services/:id/VectorTileServer/resources/styles/root.json            GET
 ```
 
-Your data can now be viewed in clients that support [Vector Tiles](https://github.com/koopjs/koop-output-vector-tiles).  Below is an example using [ArcGIS API for Javascript](https://developers.arcgis.com/javascript/latest/) and creating a [VectorTileLayer class](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-VectorTileLayer.html) with either the service URL or style URL to display the data:
+Your data can now be viewed in clients that support [Vector Tiles](https://github.com/koopjs/koop-output-vector-tiles).  Below is an example using [ArcGIS API for Javascript](https://developers.arcgis.com/javascript/latest/) creating a [VectorTileLayer class](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-VectorTileLayer.html) with the service URL to display the data:
 
 ```javascript
  require(["esri/Map", "esri/views/MapView", "esri/layers/VectorTileLayer"], function(
