@@ -1,5 +1,5 @@
 # jdONeill
-![Build](https://github.com/doneill/doneill.github.io/actions/workflows/pages.yml/badge.svg)
+![Build](https://github.com/doneill/doneill.github.io/actions/workflows/build.yml/badge.svg)
 
 GitHub pages site based on [Hexo](https://hexo.io/) for [jdONeill](https://jdoneill.com)
 
