@@ -1479,57 +1479,48 @@ article .content .caption {
   content: ")";
 }
 .highlight {
-  background: #002b36;
-  color: #839496;
+  color: #d3af86;
+  background: #221a0f;
 }
 .highlight .code .comment,
 .highlight .code .quote {
-  color: #586e75;
+  color: #d6baad;
 }
-.highlight .code .keyword,
-.highlight .code .selector-tag,
-.highlight .code .addition {
-  color: #859900;
+.highlight .code .variable,
+.highlight .code .template-variable,
+.highlight .code .tag,
+.highlight .code .name,
+.highlight .code .selector-id,
+.highlight .code .selector-class,
+.highlight .code .regexp,
+.highlight .code .meta {
+  color: #dc3958;
 }
 .highlight .code .number,
-.highlight .code .string,
-.highlight .code .meta .meta-string,
+.highlight .code .built_in,
+.highlight .code .builtin-name,
 .highlight .code .literal,
-.highlight .code .doctag,
-.highlight .code .regexp {
-  color: #2aa198;
+.highlight .code .type,
+.highlight .code .params,
+.highlight .code .deletion,
+.highlight .code .link {
+  color: #f79a32;
 }
 .highlight .code .title,
 .highlight .code .section,
-.highlight .code .name,
-.highlight .code .selector-id,
-.highlight .code .selector-class {
-  color: #268bd2;
+.highlight .code .attribute {
+  color: #f06431;
 }
-.highlight .code .attribute,
-.highlight .code .attr,
-.highlight .code .variable,
-.highlight .code .template-variable,
-.highlight .code .class .title,
-.highlight .code .type {
-  color: #b58900;
-}
+.highlight .code .string,
 .highlight .code .symbol,
 .highlight .code .bullet,
-.highlight .code .subst,
-.highlight .code .meta,
-.highlight .code .meta .keyword,
-.highlight .code .selector-attr,
-.highlight .code .selector-pseudo,
-.highlight .code .link {
-  color: #cb4b16;
+.highlight .code .addition {
+  color: #889b4a;
 }
-.highlight .code .built_in,
-.highlight .code .deletion {
-  color: #dc322f;
-}
-.highlight .code .formula {
-  background: #073642;
+.highlight .code .keyword,
+.highlight .code .selector-tag,
+.highlight .code .function {
+  color: #98676a;
 }
 .highlight .code .emphasis {
   font-style: italic;
