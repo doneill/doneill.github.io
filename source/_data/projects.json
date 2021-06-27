@@ -1,0 +1,17 @@
+[
+    {
+       "name":"koop-provider-pg",
+       "url":"https://www.npmjs.com/package/koop-provider-pg",
+       "desc":"Koop provider to query PostGIS spatial data"
+    },
+    {
+       "name":"Map Preview",
+       "url":"https://packagecontrol.io/packages/MapPreview",
+       "desc":"Preview map layer files in your web browser using Sublime Text 3"
+    },
+   {
+       "name":"kotlin mulitplatform template",
+       "url":"https://github.com/doneill/kotlin-multiplatform-template",
+       "desc":"Kotlin MPP template to bootstrap Mobile/Web"
+    }
+]
