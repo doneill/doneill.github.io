@@ -97,7 +97,7 @@ logo:
 
 # The color scheme that should be used to highlight codeblocks.
 # See source/css/_highlight for a list of all available color schemes.
-highlight: solarized-dark
+highlight: kimbie.dark
 
 # Set the color scheme.
 # Available color schemes are 'dark', 'light', 'classic' and 'white'.
