@@ -159,7 +159,7 @@ The `DemoConfig.kt` is a utility to house some globals, for now we will use to t
 ```kotlin
 package cli
 
-object FulcrumConfig {
+object DemoConfig {
     val COMMAND_NAME = "demo"
 }
 ```
@@ -286,7 +286,7 @@ Options:
 
 Try it with a demo type
 
-Examples: fulcrum hello
+Examples: Demo hello
 ```
 
 And with that we have successfully skaffold a Kotlin cli application using `Clikt` and `Coroutines`, happy coding!
