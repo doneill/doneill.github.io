@@ -8,13 +8,13 @@ const tiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 })
 
 function getColor (d) {
-  return d > 500000 ? '#800026'
-    : d > 250000 ? '#BD0026'
-      : d > 100000 ? '#E31A1C'
-        : d > 75000 ? '#FC4E2A'
-          : d > 50000 ? '#FD8D3C'
-            : d > 25000 ? '#FEB24C'
-              : d > 10000 ? '#FED976'
+  return d > 3000000 ? '#800026'
+    : d > 2000000 ? '#BD0026'
+      : d > 1000000 ? '#E31A1C'
+        : d > 750000 ? '#FC4E2A'
+          : d > 500000 ? '#FD8D3C'
+            : d > 150000 ? '#FEB24C'
+              : d > 75000 ? '#FED976'
                 : '#FFEDA0'
 }
 
@@ -74,7 +74,7 @@ $.getJSON('./data/states.geojson', function (data) {
 
   legend.onAdd = function (map) {
     const div = L.DomUtil.create('div', 'info legend')
-    const grades = [0, 10000, 25000, 50000, 75000, 100000, 250000, 500000]
+    const grades = [0, 75000, 150000, 500000, 750000, 1000000, 2000000, 3000000]
     const labels = []
     let from; let to
 
