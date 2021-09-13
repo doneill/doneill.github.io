@@ -61,7 +61,7 @@ The server will now support both GeoServices and Vector Tiles as output formats 
 /pg/rest/services/:id/VectorTileServer/resources/styles/root.json            GET
 ```
 
-Your data can now be viewed in clients that support [Vector Tiles](https://github.com/koopjs/koop-output-vector-tiles).  Below is an example using [ArcGIS API for Javascript](https://developers.arcgis.com/javascript/latest/) creating a [VectorTileLayer class](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-VectorTileLayer.html) with the service URL to display the data:
+Your data can now be viewed in clients that support [Vector Tiles](https://github.com/koopjs/koop-output-vector-tiles).  Below is an example using [ArcGIS API for Javascript](https://developers.arcgis.com/javascript/latest/) creating a [VectorTileLayer class](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-VectorTileLayer.html) with the service URL to display the data.  Replace `${schema}.${table}` with schema.table from your PostGIS db to view:
 
 ```javascript
  require(["esri/Map", "esri/views/MapView", "esri/layers/VectorTileLayer"], function(
@@ -91,3 +91,5 @@ Your data can now be viewed in clients that support [Vector Tiles](https://githu
 Generating the following ouput of PostGIS point data over the [Dark Gray Vector Basemap](https://www.arcgis.com/home/item.html?id=c11ce4f7801740b2905eb03ddc963ac8)
 
 ![Esri JS](koop-vector-tile/wa-boat-launch.png "PostGIS Vector Tiles in Esri JS")
+
+You can view the example in the [koop-provider-pg repo](https://github.com/doneill/koop-provider-pg/blob/main/src/view/vector-tile.html).
