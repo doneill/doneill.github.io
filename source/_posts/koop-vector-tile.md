@@ -11,6 +11,9 @@ tags:
 
 I introduced the [Koop PostGIS provider](https://github.com/doneill/koop-provider-pg) from a developer perspective in a previous [post](https://gh.jdoneill.com/2020/10/04/pgkoop/) where the output is GeoServices.  This post will guide us through installing a Koop service with support for PostGIS input and Vector Tiles as an output format.
 
+## Update 09/12/2021
+Replaced ArcGIS Oceans Basemap with Dark Gray Vector Basemap in the client javascript example.
+
 ## Install
 Koop providers require you to first install [Koop](https://koopjs.github.io/).  You can add `koop-provider-pg` to your Koop server dependencies by installing it with npm:
 
@@ -68,7 +71,7 @@ Your data can now be viewed in clients that support [Vector Tiles](https://githu
  ) {
    // Create a Map
    const map = new Map({
-     basemap: "oceans"
+     basemap: "dark-gray-vector"
    });
    // Make map view and bind it to the map
    var view = new MapView({
@@ -85,6 +88,6 @@ Your data can now be viewed in clients that support [Vector Tiles](https://githu
     map.add(tileLayer);
  });
 ```
-Generating the following ouput of PostGIS point data over the [Ocean Basemap](https://www.arcgis.com/home/item.html?id=5ae9e138a17842688b0b79283a4353f6)
+Generating the following ouput of PostGIS point data over the [Dark Gray Vector Basemap](https://www.arcgis.com/home/item.html?id=c11ce4f7801740b2905eb03ddc963ac8)
 
 ![Esri JS](koop-vector-tile/wa-boat-launch.png "PostGIS Vector Tiles in Esri JS")
