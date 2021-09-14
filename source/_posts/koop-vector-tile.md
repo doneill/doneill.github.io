@@ -92,4 +92,4 @@ Generating the following ouput of PostGIS point data over the [Dark Gray Vector 
 
 ![Esri JS](koop-vector-tile/wa-boat-launch.png "PostGIS Vector Tiles in Esri JS")
 
-You can view the example in the [koop-provider-pg repo](https://github.com/doneill/koop-provider-pg/blob/main/src/view/vector-tile.html).
+You can view the example in the [Koop PostGIS provider source](https://github.com/doneill/koop-provider-pg/blob/main/src/view/vector-tile.html).
