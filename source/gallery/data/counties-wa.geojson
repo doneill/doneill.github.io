@@ -4,14 +4,14 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53035",
         "STATE": "53",
         "COUNTY": "035",
         "NAME": "Kitsap",
         "LSAD": "County",
         "CENSUSAREA": 394.941,
-        "COVID_CONFIRMED": 17208,
+        "COVID_CONFIRMED": 17366,
         "COVID_DEATHS": 237
       },
       "geometry": {
@@ -381,15 +381,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53045",
         "STATE": "53",
         "COUNTY": "045",
         "NAME": "Mason",
         "LSAD": "County",
         "CENSUSAREA": 959.417,
-        "COVID_CONFIRMED": 6027,
-        "COVID_DEATHS": 73
+        "COVID_CONFIRMED": 6098,
+        "COVID_DEATHS": 74
       },
       "geometry": {
         "type": "Polygon",
@@ -562,14 +562,14 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53059",
         "STATE": "53",
         "COUNTY": "059",
         "NAME": "Skamania",
         "LSAD": "County",
         "CENSUSAREA": 1655.677,
-        "COVID_CONFIRMED": 806,
+        "COVID_CONFIRMED": 818,
         "COVID_DEATHS": 7
       },
       "geometry": {
@@ -795,14 +795,14 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53069",
         "STATE": "53",
         "COUNTY": "069",
         "NAME": "Wahkiakum",
         "LSAD": "County",
         "CENSUSAREA": 263.375,
-        "COVID_CONFIRMED": 291,
+        "COVID_CONFIRMED": 293,
         "COVID_DEATHS": 5
       },
       "geometry": {
@@ -980,14 +980,14 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53013",
         "STATE": "53",
         "COUNTY": "013",
         "NAME": "Columbia",
         "LSAD": "County",
         "CENSUSAREA": 868.629,
-        "COVID_CONFIRMED": 367,
+        "COVID_CONFIRMED": 370,
         "COVID_DEATHS": 8
       },
       "geometry": {
@@ -1157,14 +1157,14 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53023",
         "STATE": "53",
         "COUNTY": "023",
         "NAME": "Garfield",
         "LSAD": "County",
         "CENSUSAREA": 710.686,
-        "COVID_CONFIRMED": 252,
+        "COVID_CONFIRMED": 253,
         "COVID_DEATHS": 7
       },
       "geometry": {
@@ -1362,15 +1362,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53065",
         "STATE": "53",
         "COUNTY": "065",
         "NAME": "Stevens",
         "LSAD": "County",
         "CENSUSAREA": 2477.765,
-        "COVID_CONFIRMED": 5126,
-        "COVID_DEATHS": 92
+        "COVID_CONFIRMED": 5172,
+        "COVID_DEATHS": 96
       },
       "geometry": {
         "type": "Polygon",
@@ -1807,15 +1807,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53067",
         "STATE": "53",
         "COUNTY": "067",
         "NAME": "Thurston",
         "LSAD": "County",
         "CENSUSAREA": 721.961,
-        "COVID_CONFIRMED": 21226,
-        "COVID_DEATHS": 245
+        "COVID_CONFIRMED": 21487,
+        "COVID_DEATHS": 248
       },
       "geometry": {
         "type": "Polygon",
@@ -2144,15 +2144,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53071",
         "STATE": "53",
         "COUNTY": "071",
         "NAME": "Walla Walla",
         "LSAD": "County",
         "CENSUSAREA": 1270.129,
-        "COVID_CONFIRMED": 8944,
-        "COVID_DEATHS": 105
+        "COVID_CONFIRMED": 8988,
+        "COVID_DEATHS": 106
       },
       "geometry": {
         "type": "Polygon",
@@ -2437,14 +2437,14 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53073",
         "STATE": "53",
         "COUNTY": "073",
         "NAME": "Whatcom",
         "LSAD": "County",
         "CENSUSAREA": 2106.857,
-        "COVID_CONFIRMED": 16921,
+        "COVID_CONFIRMED": 17195,
         "COVID_DEATHS": 167
       },
       "geometry": {
@@ -3016,15 +3016,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53075",
         "STATE": "53",
         "COUNTY": "075",
         "NAME": "Whitman",
         "LSAD": "County",
         "CENSUSAREA": 2159.09,
-        "COVID_CONFIRMED": 5849,
-        "COVID_DEATHS": 79
+        "COVID_CONFIRMED": 5878,
+        "COVID_DEATHS": 81
       },
       "geometry": {
         "type": "Polygon",
@@ -3353,15 +3353,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53077",
         "STATE": "53",
         "COUNTY": "077",
         "NAME": "Yakima",
         "LSAD": "County",
         "CENSUSAREA": 4295.396,
-        "COVID_CONFIRMED": 43999,
-        "COVID_DEATHS": 595
+        "COVID_CONFIRMED": 44207,
+        "COVID_DEATHS": 600
       },
       "geometry": {
         "type": "Polygon",
@@ -3646,14 +3646,14 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53001",
         "STATE": "53",
         "COUNTY": "001",
         "NAME": "Adams",
         "LSAD": "County",
         "CENSUSAREA": 1924.978,
-        "COVID_CONFIRMED": 3267,
+        "COVID_CONFIRMED": 3286,
         "COVID_DEATHS": 33
       },
       "geometry": {
@@ -3771,14 +3771,14 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53003",
         "STATE": "53",
         "COUNTY": "003",
         "NAME": "Asotin",
         "LSAD": "County",
         "CENSUSAREA": 636.213,
-        "COVID_CONFIRMED": 2881,
+        "COVID_CONFIRMED": 2903,
         "COVID_DEATHS": 50
       },
       "geometry": {
@@ -4260,15 +4260,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53005",
         "STATE": "53",
         "COUNTY": "005",
         "NAME": "Benton",
         "LSAD": "County",
         "CENSUSAREA": 1700.379,
-        "COVID_CONFIRMED": 31574,
-        "COVID_DEATHS": 371
+        "COVID_CONFIRMED": 31689,
+        "COVID_DEATHS": 372
       },
       "geometry": {
         "type": "Polygon",
@@ -4529,15 +4529,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53007",
         "STATE": "53",
         "COUNTY": "007",
         "NAME": "Chelan",
         "LSAD": "County",
         "CENSUSAREA": 2920.525,
-        "COVID_CONFIRMED": 11367,
-        "COVID_DEATHS": 104
+        "COVID_CONFIRMED": 11516,
+        "COVID_DEATHS": 106
       },
       "geometry": {
         "type": "Polygon",
@@ -5170,15 +5170,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53009",
         "STATE": "53",
         "COUNTY": "009",
         "NAME": "Clallam",
         "LSAD": "County",
         "CENSUSAREA": 1738.329,
-        "COVID_CONFIRMED": 4951,
-        "COVID_DEATHS": 66
+        "COVID_CONFIRMED": 4992,
+        "COVID_DEATHS": 67
       },
       "geometry": {
         "type": "Polygon",
@@ -5835,15 +5835,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53011",
         "STATE": "53",
         "COUNTY": "011",
         "NAME": "Clark",
         "LSAD": "County",
         "CENSUSAREA": 629.004,
-        "COVID_CONFIRMED": 42669,
-        "COVID_DEATHS": 505
+        "COVID_CONFIRMED": 43078,
+        "COVID_DEATHS": 508
       },
       "geometry": {
         "type": "Polygon",
@@ -6112,15 +6112,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53015",
         "STATE": "53",
         "COUNTY": "015",
         "NAME": "Cowlitz",
         "LSAD": "County",
         "CENSUSAREA": 1140.125,
-        "COVID_CONFIRMED": 13748,
-        "COVID_DEATHS": 248
+        "COVID_CONFIRMED": 13883,
+        "COVID_DEATHS": 249
       },
       "geometry": {
         "type": "Polygon",
@@ -6361,15 +6361,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53017",
         "STATE": "53",
         "COUNTY": "017",
         "NAME": "Douglas",
         "LSAD": "County",
         "CENSUSAREA": 1819.264,
-        "COVID_CONFIRMED": 6193,
-        "COVID_DEATHS": 38
+        "COVID_CONFIRMED": 6254,
+        "COVID_DEATHS": 39
       },
       "geometry": {
         "type": "Polygon",
@@ -6870,14 +6870,14 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53019",
         "STATE": "53",
         "COUNTY": "019",
         "NAME": "Ferry",
         "LSAD": "County",
         "CENSUSAREA": 2203.159,
-        "COVID_CONFIRMED": 853,
+        "COVID_CONFIRMED": 858,
         "COVID_DEATHS": 15
       },
       "geometry": {
@@ -7243,15 +7243,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53021",
         "STATE": "53",
         "COUNTY": "021",
         "NAME": "Franklin",
         "LSAD": "County",
         "CENSUSAREA": 1242.171,
-        "COVID_CONFIRMED": 20329,
-        "COVID_DEATHS": 179
+        "COVID_CONFIRMED": 20406,
+        "COVID_DEATHS": 180
       },
       "geometry": {
         "type": "Polygon",
@@ -7516,15 +7516,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53025",
         "STATE": "53",
         "COUNTY": "025",
         "NAME": "Grant",
         "LSAD": "County",
         "CENSUSAREA": 2679.513,
-        "COVID_CONFIRMED": 16401,
-        "COVID_DEATHS": 155
+        "COVID_CONFIRMED": 16505,
+        "COVID_DEATHS": 154
       },
       "geometry": {
         "type": "Polygon",
@@ -7881,15 +7881,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53027",
         "STATE": "53",
         "COUNTY": "027",
         "NAME": "Grays Harbor",
         "LSAD": "County",
         "CENSUSAREA": 1902.027,
-        "COVID_CONFIRMED": 8850,
-        "COVID_DEATHS": 133
+        "COVID_CONFIRMED": 8938,
+        "COVID_DEATHS": 135
       },
       "geometry": {
         "type": "Polygon",
@@ -8286,15 +8286,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53029",
         "STATE": "53",
         "COUNTY": "029",
         "NAME": "Island",
         "LSAD": "County",
         "CENSUSAREA": 208.449,
-        "COVID_CONFIRMED": 4089,
-        "COVID_DEATHS": 47
+        "COVID_CONFIRMED": 4152,
+        "COVID_DEATHS": 48
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -9073,14 +9073,14 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53031",
         "STATE": "53",
         "COUNTY": "031",
         "NAME": "Jefferson",
         "LSAD": "County",
         "CENSUSAREA": 1803.7,
-        "COVID_CONFIRMED": 1133,
+        "COVID_CONFIRMED": 1149,
         "COVID_DEATHS": 17
       },
       "geometry": {
@@ -9598,15 +9598,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53033",
         "STATE": "53",
         "COUNTY": "033",
         "NAME": "King",
         "LSAD": "County",
         "CENSUSAREA": 2115.566,
-        "COVID_CONFIRMED": 166504,
-        "COVID_DEATHS": 2015
+        "COVID_CONFIRMED": 167673,
+        "COVID_DEATHS": 2023
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -10197,15 +10197,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53037",
         "STATE": "53",
         "COUNTY": "037",
         "NAME": "Kittitas",
         "LSAD": "County",
         "CENSUSAREA": 2297.271,
-        "COVID_CONFIRMED": 5040,
-        "COVID_DEATHS": 56
+        "COVID_CONFIRMED": 5079,
+        "COVID_DEATHS": 55
       },
       "geometry": {
         "type": "Polygon",
@@ -10566,15 +10566,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53039",
         "STATE": "53",
         "COUNTY": "039",
         "NAME": "Klickitat",
         "LSAD": "County",
         "CENSUSAREA": 1871.313,
-        "COVID_CONFIRMED": 2099,
-        "COVID_DEATHS": 23
+        "COVID_CONFIRMED": 2140,
+        "COVID_DEATHS": 24
       },
       "geometry": {
         "type": "Polygon",
@@ -10883,15 +10883,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53041",
         "STATE": "53",
         "COUNTY": "041",
         "NAME": "Lewis",
         "LSAD": "County",
         "CENSUSAREA": 2402.802,
-        "COVID_CONFIRMED": 10272,
-        "COVID_DEATHS": 156
+        "COVID_CONFIRMED": 10359,
+        "COVID_DEATHS": 158
       },
       "geometry": {
         "type": "Polygon",
@@ -11120,14 +11120,14 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53043",
         "STATE": "53",
         "COUNTY": "043",
         "NAME": "Lincoln",
         "LSAD": "County",
         "CENSUSAREA": 2310.494,
-        "COVID_CONFIRMED": 1412,
+        "COVID_CONFIRMED": 1429,
         "COVID_DEATHS": 22
       },
       "geometry": {
@@ -11345,14 +11345,14 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53047",
         "STATE": "53",
         "COUNTY": "047",
         "NAME": "Okanogan",
         "LSAD": "County",
         "CENSUSAREA": 5267.978,
-        "COVID_CONFIRMED": 5335,
+        "COVID_CONFIRMED": 5390,
         "COVID_DEATHS": 87
       },
       "geometry": {
@@ -11898,14 +11898,14 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53049",
         "STATE": "53",
         "COUNTY": "049",
         "NAME": "Pacific",
         "LSAD": "County",
         "CENSUSAREA": 932.658,
-        "COVID_CONFIRMED": 1828,
+        "COVID_CONFIRMED": 1838,
         "COVID_DEATHS": 33
       },
       "geometry": {
@@ -12431,15 +12431,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53051",
         "STATE": "53",
         "COUNTY": "051",
         "NAME": "Pend Oreille",
         "LSAD": "County",
         "CENSUSAREA": 1399.989,
-        "COVID_CONFIRMED": 1571,
-        "COVID_DEATHS": 22
+        "COVID_CONFIRMED": 1593,
+        "COVID_DEATHS": 23
       },
       "geometry": {
         "type": "Polygon",
@@ -12620,15 +12620,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53053",
         "STATE": "53",
         "COUNTY": "053",
         "NAME": "Pierce",
         "LSAD": "County",
         "CENSUSAREA": 1669.508,
-        "COVID_CONFIRMED": 94007,
-        "COVID_DEATHS": 898
+        "COVID_CONFIRMED": 95083,
+        "COVID_DEATHS": 902
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -13343,14 +13343,14 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53055",
         "STATE": "53",
         "COUNTY": "055",
         "NAME": "San Juan",
         "LSAD": "County",
         "CENSUSAREA": 173.915,
-        "COVID_CONFIRMED": 347,
+        "COVID_CONFIRMED": 357,
         "COVID_DEATHS": 0
       },
       "geometry": {
@@ -13914,15 +13914,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53057",
         "STATE": "53",
         "COUNTY": "057",
         "NAME": "Skagit",
         "LSAD": "County",
         "CENSUSAREA": 1731.203,
-        "COVID_CONFIRMED": 11696,
-        "COVID_DEATHS": 115
+        "COVID_CONFIRMED": 11963,
+        "COVID_DEATHS": 116
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -14609,15 +14609,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53061",
         "STATE": "53",
         "COUNTY": "061",
         "NAME": "Snohomish",
         "LSAD": "County",
         "CENSUSAREA": 2087.273,
-        "COVID_CONFIRMED": 66997,
-        "COVID_DEATHS": 767
+        "COVID_CONFIRMED": 67751,
+        "COVID_DEATHS": 772
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -15028,15 +15028,15 @@
     {
       "type": "Feature",
       "properties": {
-        "UPDATED": "2021-11-05 20:21:54",
+        "UPDATED": "2021-11-09 20:21:38",
         "GEO_ID": "0500000US53063",
         "STATE": "53",
         "COUNTY": "063",
         "NAME": "Spokane",
         "LSAD": "County",
         "CENSUSAREA": 1763.791,
-        "COVID_CONFIRMED": 73761,
-        "COVID_DEATHS": 1019
+        "COVID_CONFIRMED": 74459,
+        "COVID_DEATHS": 1030
       },
       "geometry": {
         "type": "Polygon",
