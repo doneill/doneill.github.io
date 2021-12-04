@@ -55,4 +55,16 @@ date: 2021-12-03 17:42:43
 - [Browserosaurus](https://github.com/will-stone/browserosaurus)
     Mac browser prompter
 
+## CLI
+- [Silver Searcher](https://github.com/ggreer/the_silver_searcher)
+    Code searching tool
+- [bat](https://github.com/sharkdp/bat)
+    Cat clone with syntax highlighting and Git integration
+- [exa](https://the.exa.website/)
+    Modern replacement for `ls`
+- [fzf](https://github.com/junegunn/fzf)
+    Terminal fuzzy finder
+- [Dust](https://github.com/bootandy/dust)
+    More intuitive version of `du`
+
 
