@@ -31,7 +31,7 @@ date: 2021-12-03 17:42:43
 - [Star UML](https://staruml.io/)
     Model driven development tool
 
-## GIS
+### GIS
 - [QGIS](https://qgis.org)
     Desktop GIS
 - [PostGIS](https://postgis.net/)
@@ -47,7 +47,7 @@ date: 2021-12-03 17:42:43
 - [Koop](https://koopjs.github.io/)
     Spatial data transformer, [PostGIS provider](https://github.com/doneill/koop-provider-pg) to transform PostGIS data into ESRI Geoservices
 
-## Productivity
+### Productivity
 - [Zettlr](https://www.zettlr.com/)
     Markdown editor
 - [Raycast](https://www.raycast.com/)
@@ -55,7 +55,7 @@ date: 2021-12-03 17:42:43
 - [Browserosaurus](https://github.com/will-stone/browserosaurus)
     Mac browser prompter
 
-## CLI
+### CLI
 - [Silver Searcher](https://github.com/ggreer/the_silver_searcher)
     Code searching tool
 - [bat](https://github.com/sharkdp/bat)
