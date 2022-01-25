@@ -9,12 +9,12 @@
     <meta name="description" content="SQLDelightSQLDelight provides libraries and drivers to generate typesafe Kotlin classes from SQL statements that verifies database schemas, statements, and migrations at compile time.  This post will">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Multiplatform Persistence with SQLDelight">
-<meta property="og:url" content="http://gh.jdoneill.com/2020/06/28/sqldelight/index.html">
+<meta property="og:url" content="http://gh.jdoneill.com/2020/06/29/sqldelight/index.html">
 <meta property="og:site_name" content="jdONeill">
 <meta property="og:description" content="SQLDelightSQLDelight provides libraries and drivers to generate typesafe Kotlin classes from SQL statements that verifies database schemas, statements, and migrations at compile time.  This post will">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-06-28T18:18:25.000Z">
-<meta property="article:modified_time" content="2020-06-28T18:18:25.000Z">
+<meta property="article:published_time" content="2020-06-29T01:18:25.000Z">
+<meta property="article:modified_time" content="2020-06-29T01:18:25.000Z">
 <meta property="article:author" content="jdONeill">
 <meta property="article:tag" content="kotlin">
 <meta property="article:tag" content="multiplatform">
@@ -68,10 +68,10 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2020/08/14/mappreview/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" href="/2020/08/15/mappreview/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
-        <li><a class="icon" href="/2020/03/31/jq-geojson/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="/2020/04/01/jq-geojson/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -84,17 +84,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://gh.jdoneill.com/2020/06/28/sqldelight/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&text=Multiplatform Persistence with SQLDelight"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&is_video=false&description=Multiplatform Persistence with SQLDelight"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Multiplatform Persistence with SQLDelight&body=Check out this article: http://gh.jdoneill.com/2020/06/28/sqldelight/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&name=Multiplatform Persistence with SQLDelight&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://gh.jdoneill.com/2020/06/28/sqldelight/&t=Multiplatform Persistence with SQLDelight"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://gh.jdoneill.com/2020/06/29/sqldelight/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&text=Multiplatform Persistence with SQLDelight"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&is_video=false&description=Multiplatform Persistence with SQLDelight"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Multiplatform Persistence with SQLDelight&body=Check out this article: http://gh.jdoneill.com/2020/06/29/sqldelight/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&name=Multiplatform Persistence with SQLDelight&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://gh.jdoneill.com/2020/06/29/sqldelight/&t=Multiplatform Persistence with SQLDelight"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -123,7 +123,7 @@
       
     <div class="postdate">
       
-        <time datetime="2020-06-28T18:18:25.000Z" itemprop="datePublished">2020-06-28</time>
+        <time datetime="2020-06-29T01:18:25.000Z" itemprop="datePublished">2020-06-29</time>
         
       
     </div>
@@ -210,17 +210,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://gh.jdoneill.com/2020/06/28/sqldelight/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&text=Multiplatform Persistence with SQLDelight"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&is_video=false&description=Multiplatform Persistence with SQLDelight"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Multiplatform Persistence with SQLDelight&body=Check out this article: http://gh.jdoneill.com/2020/06/28/sqldelight/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://gh.jdoneill.com/2020/06/28/sqldelight/&name=Multiplatform Persistence with SQLDelight&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://gh.jdoneill.com/2020/06/28/sqldelight/&t=Multiplatform Persistence with SQLDelight"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://gh.jdoneill.com/2020/06/29/sqldelight/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&text=Multiplatform Persistence with SQLDelight"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&is_video=false&description=Multiplatform Persistence with SQLDelight"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Multiplatform Persistence with SQLDelight&body=Check out this article: http://gh.jdoneill.com/2020/06/29/sqldelight/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&title=Multiplatform Persistence with SQLDelight"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://gh.jdoneill.com/2020/06/29/sqldelight/&name=Multiplatform Persistence with SQLDelight&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://gh.jdoneill.com/2020/06/29/sqldelight/&t=Multiplatform Persistence with SQLDelight"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
