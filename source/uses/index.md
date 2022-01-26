@@ -21,7 +21,7 @@ date: 2021-12-03 17:42:43
 - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
     Terminal/Coding font with ligatures, [Fira Code](https://github.com/tonsky/FiraCode) as backup.
 - [iTerm2](https://iterm2.com/)
-    MacOS terminal emulator with [oh my zsh](https://ohmyz.sh/).  Evaluating [alacritty](https://github.com/alacritty/alacritty) with [tmux](https://github.com/tmux/tmux) multiplexer
+    MacOS terminal emulator with [oh my zsh](https://ohmyz.sh/).  Evaluating [warp](https://www.warp.dev/) 
 - [Postico](https://eggerapps.at/postico/)
     Mac PostgreSQL client
 - [Db Browser](https://sqlitebrowser.org/)
@@ -30,6 +30,8 @@ date: 2021-12-03 17:42:43
     Mac HTTP client
 - [Star UML](https://staruml.io/)
     Model driven development tool
+- [Mockoon](https://mockoon.com/)
+    Mock REST APIs
 
 ### GIS
 - [QGIS](https://qgis.org)
@@ -48,6 +50,8 @@ date: 2021-12-03 17:42:43
     Spatial data transformer, [PostGIS provider](https://github.com/doneill/koop-provider-pg) to transform PostGIS data into ESRI Geoservices
 
 ### Productivity
+- [Notion](https://www.notion.so/)
+    Logging app
 - [Zettlr](https://www.zettlr.com/)
     Markdown editor
 - [Raycast](https://www.raycast.com/)
