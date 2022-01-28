@@ -13,7 +13,6 @@ obsidian*
 
 # python
 .python-version
-Pipfile.lock
 
 # js
 .tern-port
