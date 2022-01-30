@@ -4,6 +4,9 @@
 GitHub pages site based on [Hexo](https://hexo.io/) for [jdONeill](https://jdoneill.com)
 
 ```bash
+# install hexo-cli
+$ npm install hexo-cli -g
+
 # clean db
 $ hexo clean
 
