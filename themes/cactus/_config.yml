@@ -26,7 +26,6 @@ nav:
 # only 'mail' is an exception.
 social_links:
   github: http://github.com/doneill
-  twitter: http://twitter.com/jdoneill
   linkedin: http://linkedin.com/in/jdoneill
 
 # Customize the overview with displaying a tag cloud on the index page.
