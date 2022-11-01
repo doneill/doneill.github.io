@@ -8,10 +8,16 @@ date: 2021-12-03 17:42:43
 ### Code
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
     Java/Kotlin development, [Android Studio](https://developer.android.com/studio)
+- [WebStorm](https://www.jetbrains.com/webstorm/)
+    React Native
 - [AppCode](https://www.jetbrains.com/objc/)
     Preferred for macOS/iOS development, occasional [Xcode](https://developer.apple.com/xcode/)
+- [zed](https://zed.dev/)
+    Collaborative code editor
 - [Sublime Text](https://www.sublimetext.com/)
-    Use it for everything else, Go, Rust, JS, etc., waiting to be accepted into [Fleet](https://www.jetbrains.com/fleet/)
+    Use it for everything else, Go, Rust, JS, etc.
+- [Fleet](https://www.jetbrains.com/fleet/)
+    Light Editor
 - [Amp](https://amp.rs/)
     Console editor, vim replacement
 
