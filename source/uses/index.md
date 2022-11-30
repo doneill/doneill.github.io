@@ -26,8 +26,10 @@ date: 2021-12-03 17:42:43
     When not using Git CLI, more productive reviews
 - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
     Terminal/Coding font with ligatures, [Fira Code](https://github.com/tonsky/FiraCode) as backup.
-- [iTerm2](https://iterm2.com/)
-    MacOS terminal emulator with [oh my zsh](https://ohmyz.sh/).  Evaluating [warp](https://www.warp.dev/) 
+- [warp](https://www.warp.dev/) 
+     Rust based terminal
+- [starship](https://starship.rs/)
+     Cross-shell prompt
 - [Postico](https://eggerapps.at/postico/)
     Mac PostgreSQL client
 - [Db Browser](https://sqlitebrowser.org/)
@@ -58,12 +60,12 @@ date: 2021-12-03 17:42:43
 ### Productivity
 - [Notion](https://www.notion.so/)
     Logging app
-- [Zettlr](https://www.zettlr.com/)
+- [craft](https://www.craft.do/)
     Markdown editor
 - [Raycast](https://www.raycast.com/)
     Mac extendible launcher
-- [Browserosaurus](https://github.com/will-stone/browserosaurus)
-    Mac browser prompter
+- [Arc](https://thebrowser.company/)
+    Modern developer browser
 
 ### CLI
 - [Silver Searcher](https://github.com/ggreer/the_silver_searcher)
@@ -76,5 +78,27 @@ date: 2021-12-03 17:42:43
     Terminal fuzzy finder
 - [Dust](https://github.com/bootandy/dust)
     More intuitive version of `du`
+- [jless](https://jless.io/)
+    Command line JSON Viewer
+- [hurl](https://hurl.dev/)
+    Command line HTTP requests
+- [delta](https://github.com/dandavison/delta)
+    Syntax highlighting pager for git
+- [GitHub cli](https://cli.github.com/)
+    GitHub in the terminal
+- [hub](https://hub.github.com/)
+    Extension to command line git
+- [tokei](https://github.com/XAMPPRocky/tokei)
+    Displays statistics about code
+- [jg](https://stedolan.github.io/jq/)
+    sed for json data
+- [yq](https://mikefarah.gitbook.io/yq/)
+    Command line yaml processor
 
-
+### Archive
+- [iTerm2](https://iterm2.com/)
+    MacOS terminal emulator with [oh my zsh](https://ohmyz.sh/).
+- [Zettlr](https://www.zettlr.com/)
+    Markdown editor
+- [Browserosaurus](https://github.com/will-stone/browserosaurus)
+    Mac browser prompter
