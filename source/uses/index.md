@@ -19,6 +19,8 @@ date: 2021-12-03 17:42:43
 ### Develpment
 - [Sublime Merge](https://www.sublimemerge.com/)
     When not using Git CLI, more productive reviews
+- [GitUI](https://github.com/extrawurst/gitui)
+    Git in the terminal
 - [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
     Terminal/Coding font with ligatures, [Fira Code](https://github.com/tonsky/FiraCode) as backup.
 - [warp](https://www.warp.dev/) 
