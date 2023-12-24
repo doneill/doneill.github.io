@@ -6,20 +6,15 @@ date: 2021-12-03 17:42:43
 ## Uses
 
 ### Code
-- [IntelliJ IDEA](https://www.jetbrains.com/idea/)
-    Java/Kotlin development, [Android Studio](https://developer.android.com/studio)
-- [WebStorm](https://www.jetbrains.com/webstorm/)
-    React Native
-- [AppCode](https://www.jetbrains.com/objc/)
-    Preferred for macOS/iOS development, occasional [Xcode](https://developer.apple.com/xcode/)
+- [Helix](https://helix-editor.com)
+    Daily Driver
+- [Fleet](https://www.jetbrains.com/fleet/)
+    Kotlin Multiplatform candidate
+#### On Rader 
 - [zed](https://zed.dev/)
     Collaborative code editor
-- [Sublime Text](https://www.sublimetext.com/)
-    Use it for everything else, Go, Rust, JS, etc.
-- [Fleet](https://www.jetbrains.com/fleet/)
-    Light Editor
-- [Amp](https://amp.rs/)
-    Console editor, vim replacement
+- [Lapce](https://lapce.dev)
+    Fast native GUI
 
 ### Develpment
 - [Sublime Merge](https://www.sublimemerge.com/)
@@ -60,7 +55,7 @@ date: 2021-12-03 17:42:43
 ### Productivity
 - [Notion](https://www.notion.so/)
     Logging app
-- [craft](https://www.craft.do/)
+- [Craft](https://www.craft.do/)
     Markdown editor
 - [Raycast](https://www.raycast.com/)
     Mac extendible launcher
@@ -96,9 +91,17 @@ date: 2021-12-03 17:42:43
     Command line yaml processor
 
 ### Archive
+- [Sublime Text](https://www.sublimetext.com/)
+    Use it for everything else, Go, Rust, JS, etc.
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+    Java/Kotlin development, [Android Studio](https://developer.android.com/studio)
+- [WebStorm](https://www.jetbrains.com/webstorm/)
+    React Native
 - [iTerm2](https://iterm2.com/)
     MacOS terminal emulator with [oh my zsh](https://ohmyz.sh/).
 - [Zettlr](https://www.zettlr.com/)
     Markdown editor
 - [Browserosaurus](https://github.com/will-stone/browserosaurus)
     Mac browser prompter
+- [Amp](https://amp.rs/)
+    Console editor, vim replacement
