@@ -59,11 +59,10 @@ for i in df.index:
 
       if (stateName == dataStateName):
         feature['properties']['COVID_CONFIRMED'] = df['TotalCases'][i]
-        feature['properties']['COVID_NEW'] = df['NewCases'][i]
         feature['properties']['COVID_DEATHS'] = df['TotalDeaths'][i]
 
     # print out results
-    print(df['USAState'][i], df['TotalCases'][i], df['NewCases'][i], df['TotalDeaths'][i])
+    print(df['USAState'][i], df['TotalCases'][i], df['TotalDeaths'][i])
 
 with open('./source/gallery/data/states.geojson', 'w') as f:
   f.seek(0)
