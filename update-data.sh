@@ -7,5 +7,5 @@ jq -s . temp.geojson > ./source/gallery/data/counties-wa-point.geojson
 rm temp.geojson
 
 # update geojson data
-pipenv run python wa-counties-covid.py
-pipenv run python covid19.py
+uv run python wa-counties-covid.py
+uv run python covid19.py
