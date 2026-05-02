@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Traditional GIS workflows assume data lives on a local filesystem. With cloud-native the data lives in object storage, S3, GCS, Azure, etc. and your compute moves to the data. This post introduces the">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cloud Native Geospatial">
+<meta property="og:url" content="http://gh.jdoneill.com/2026/05/01/cog-stack/index.html">
+<meta property="og:site_name" content="jdONeill">
+<meta property="og:description" content="Traditional GIS workflows assume data lives on a local filesystem. With cloud-native the data lives in object storage, S3, GCS, Azure, etc. and your compute moves to the data. This post introduces the">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-05-01T17:40:25.000Z">
+<meta property="article:modified_time" content="2026-05-01T17:40:25.000Z">
+<meta property="article:author" content="jdONeill">
+<meta property="article:tag" content="geospatial">
+<meta property="article:tag" content="cloud-native">
+<meta property="article:tag" content="geotiff">
+<meta property="article:tag" content="stac">
+<meta property="article:tag" content="zarr">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!-- title -->
+    <title>Cloud Native Geospatial</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- Leaflet -->
+    
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="jdONeill" type="application/atom+xml" />
+    
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/gallery/">Gallery</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2025/03/17/harlequin-custom-config/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://gh.jdoneill.com/2026/05/01/cog-stack/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&text=Cloud Native Geospatial"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&title=Cloud Native Geospatial"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&is_video=false&description=Cloud Native Geospatial"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Cloud Native Geospatial&body=Check out this article: http://gh.jdoneill.com/2026/05/01/cog-stack/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&title=Cloud Native Geospatial"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&title=Cloud Native Geospatial"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&title=Cloud Native Geospatial"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&title=Cloud Native Geospatial"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&name=Cloud Native Geospatial&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://gh.jdoneill.com/2026/05/01/cog-stack/&t=Cloud Native Geospatial"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#STAC"><span class="toc-number">1.</span> <span class="toc-text">STAC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cog"><span class="toc-number">2.</span> <span class="toc-text">Cog</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Zarr"><span class="toc-number">3.</span> <span class="toc-text">Zarr</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Virtual-Zarr"><span class="toc-number">4.</span> <span class="toc-text">Virtual Zarr</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#When-to-use-each-approach"><span class="toc-number">5.</span> <span class="toc-text">When to use each approach</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Cloud Native Geospatial
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">jdONeill</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2026-05-01T17:40:25.000Z" itemprop="datePublished">2026-05-01</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/cloud-native/" rel="tag">cloud-native</a>, <a class="tag-link-link" href="/tags/geospatial/" rel="tag">geospatial</a>, <a class="tag-link-link" href="/tags/geotiff/" rel="tag">geotiff</a>, <a class="tag-link-link" href="/tags/stac/" rel="tag">stac</a>, <a class="tag-link-link" href="/tags/zarr/" rel="tag">zarr</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Traditional GIS workflows assume data lives on a local filesystem. With cloud-native the data lives in object storage, S3, GCS, Azure, etc. and your compute moves to the data. This post introduces the technology stack for the following cloud-native geospatial formats</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://stacspec.org/">STAC: SpatioTemporal Asset Catalog</a></li>
+<li><a target="_blank" rel="noopener" href="https://cogeo.org/">COG: Cloud Optimzed GeoTIFF</a></li>
+<li><a target="_blank" rel="noopener" href="https://zarr.dev/">Zarr</a></li>
+<li><a target="_blank" rel="noopener" href="https://virtualzarr.cloud/">Virtual Zarr</a></li>
+</ul>
+<h2 id="STAC"><a href="#STAC" class="headerlink" title="STAC"></a>STAC</h2><p>A JSON-based open specification for describing a libary system for spatial data </p>
+<ul>
+<li><p>STAC Catalog<br>The top level entry point representing a logical group of other catalogs, collections, and item objects.</p>
+</li>
+<li><p>Collection<br>A named grouping of related items that share a common sensor, processing level, and data format. An example collection could be sentinel-2-l2a.</p>
+</li>
+</ul>
+<ul>
+<li><p>Item: represents a GeoJSON feature<br>A single acquisition over a specific place at a specific time.  It is metadata record that points to the data.</p>
+</li>
+<li><p>Asset<br>Each item has a dictionary of named assets, the source data files</p>
+</li>
+</ul>
+<p>How they nest</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Catalog  (Earth Search)</span><br><span class="line">└── Collection  (sentinel-2-l2a)</span><br><span class="line">    └── Item  (S2B_10SEG_20240816_0_L2A)</span><br><span class="line">        ├── Asset: red   → https://sentinel-cogs.s3…/B04.tif</span><br><span class="line">        ├── Asset: nir   → https://sentinel-cogs.s3…/B08.tif</span><br><span class="line">        └── Asset: scl   → https://sentinel-cogs.s3…/SCL.tif</span><br></pre></td></tr></table></figure>
+
+<h2 id="Cog"><a href="#Cog" class="headerlink" title="Cog"></a>Cog</h2><p>A regular GeoTIFF restructured under the following conditions:</p>
+<ul>
+<li>Tiles replace scanlines for efficient HTTP reads</li>
+<li>Overiew pyramids baked in to all inexpensive low-resolution read</li>
+<li>Header first in the file supporting a single HTTP <code>GET</code> to fetch all data</li>
+</ul>
+<p>The cloud optimization is transparent to the GeoTIFF whereby you can open in with any GDAL tooling.</p>
+<h2 id="Zarr"><a href="#Zarr" class="headerlink" title="Zarr"></a>Zarr</h2><p>Chunked, compressed, N-dimensional array storage known as tensors.</p>
+<ul>
+<li>Chunks are individual files or objects in storage allowing for independent reads</li>
+<li>Native <a target="_blank" rel="noopener" href="https://docs.dask.org/">Dask</a> integration</li>
+</ul>
+<p>For satellite time-series, a typical store layout is</p>
+<p><code>(time=T, band=B, y=Y, x=X)   chunked as (1, 1, 512, 512)</code></p>
+<p>This equates to fetching one band at one time step is one chunk read.</p>
+<h2 id="Virtual-Zarr"><a href="#Virtual-Zarr" class="headerlink" title="Virtual Zarr"></a>Virtual Zarr</h2><p>Enables performant cloud optimized access to achival data formats like netCDF and HDF5 without duplicated any data. The key insight is you don’t need to convert Zarr to use Zarr APIs.</p>
+<p><a target="_blank" rel="noopener" href="https://fsspec.github.io/kerchunk/">kerchunk</a> scans the internal byte layout of the existing files, e.g. COGs, NetCDF, etc., and writes a tiny JSON reference file that maps to Zarr chunk addresses to HTTP byte-range requests resulting in a heterogeneous collection of COGs in object storage appears as a unified queryable Zarr dataset without any data movement.</p>
+<h2 id="When-to-use-each-approach"><a href="#When-to-use-each-approach" class="headerlink" title="When to use each approach"></a>When to use each approach</h2><ul>
+<li><p>Virtual Zarr</p>
+<ul>
+<li>Exploring a new dataset or performaning a single query</li>
+<li>Don’t have control over the source data</li>
+</ul>
+</li>
+<li><p>Zarr</p>
+<ul>
+<li>Repeatd analysis of the same area of interest</li>
+<li>Data shared with multiple clients/users</li>
+<li>Require custom chunking for time-series queries</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/gallery/">Gallery</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#STAC"><span class="toc-number">1.</span> <span class="toc-text">STAC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cog"><span class="toc-number">2.</span> <span class="toc-text">Cog</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Zarr"><span class="toc-number">3.</span> <span class="toc-text">Zarr</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Virtual-Zarr"><span class="toc-number">4.</span> <span class="toc-text">Virtual Zarr</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#When-to-use-each-approach"><span class="toc-number">5.</span> <span class="toc-text">When to use each approach</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://gh.jdoneill.com/2026/05/01/cog-stack/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&text=Cloud Native Geospatial"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&title=Cloud Native Geospatial"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&is_video=false&description=Cloud Native Geospatial"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Cloud Native Geospatial&body=Check out this article: http://gh.jdoneill.com/2026/05/01/cog-stack/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&title=Cloud Native Geospatial"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&title=Cloud Native Geospatial"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&title=Cloud Native Geospatial"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&title=Cloud Native Geospatial"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://gh.jdoneill.com/2026/05/01/cog-stack/&name=Cloud Native Geospatial&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://gh.jdoneill.com/2026/05/01/cog-stack/&t=Cloud Native Geospatial"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2026 jdONeill
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/gallery/">Gallery</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
