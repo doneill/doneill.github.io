@@ -20,11 +20,6 @@
     "desc": "EarthRanger command line interface tool"
   },
   {
-    "name": "er-cli",
-    "url": "https://github.com/doneill/er-cli",
-    "desc": "EarthRanger command line interface tool"
-  },
-  {
     "name": "gosql",
     "url": "https://codeberg.org/jdoneill/gosql",
     "desc": "SQLite query TUI in Go"
